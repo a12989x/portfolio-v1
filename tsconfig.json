@@ -20,8 +20,8 @@
 		"sourceMap": true,
 		"strict": true,
 		"target": "es2018",
-		"baseUrl": "."
-		// "paths": {}
+		"baseUrl": ".",
+		"paths": { "@/styles/*": ["styles/*"] }
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]
