@@ -1,9 +1,3 @@
-import { extendTheme } from '@chakra-ui/react';
-
-const fonts = {
-	body: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-};
-
 const colors = {
 	default: { light: '#fcfcfc', dark: '#232323' },
 	primary: {
@@ -34,16 +28,4 @@ const colors = {
 		700: '#404040',
 	},
 };
-
-const styles = {
-	global: (props) => ({
-		body: {
-			color: props.colorMode === 'light' ? 'dark' : 'light',
-			bg: props.colorMode === 'light' ? 'dark' : 'light',
-		},
-	}),
-};
-
-const theme = extendTheme({ fonts, colors, styles });
-
-export default theme;
+export default colors;
