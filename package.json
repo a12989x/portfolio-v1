@@ -16,6 +16,7 @@
 		"build-storybook": "build-storybook"
 	},
 	"dependencies": {
+		"@chakra-ui/icons": "^1.0.13",
 		"@chakra-ui/react": "^1.6.3",
 		"@emotion/react": "^11.4.0",
 		"@emotion/styled": "^11.3.0",
@@ -26,6 +27,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
+		"@storybook/addon-a11y": "^6.2.9",
 		"@storybook/addon-actions": "^6.2.9",
 		"@storybook/addon-essentials": "^6.2.9",
 		"@storybook/addon-links": "^6.2.9",
