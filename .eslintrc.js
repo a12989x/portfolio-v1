@@ -20,7 +20,10 @@ module.exports = {
 	plugins: ['react'],
 	rules: {
 		'react/react-in-jsx-scope': 0,
-		'react/jsx-filename-extension': [1, { extensions: ['ts', 'tsx'] }],
+		'react/jsx-filename-extension': [
+			1,
+			{ extensions: ['js', 'jsx', 'ts', 'tsx'] },
+		],
 	},
 	settings: { react: { version: 'latest' } },
 };
