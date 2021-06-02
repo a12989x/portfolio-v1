@@ -1,11 +1,16 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
+
 import theme from '../styles/theme';
+
+import Nav from './Nav';
 
 export const decorators = [
 	(Story) => (
 		<ChakraProvider resetCSS theme={theme}>
-			<Story />
+			<Nav>
+				<Story />
+			</Nav>
 		</ChakraProvider>
 	),
 ];
