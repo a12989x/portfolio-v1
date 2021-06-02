@@ -13,7 +13,8 @@
 		"test-all": "npm run check-types && npm run check-format && npm run check-lint && npm run build",
 		"prepare": "husky install",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"chromatic": "npx chromatic CHROMATIC_PROJECT_TOKEN"
 	},
 	"dependencies": {
 		"@chakra-ui/icons": "^1.0.13",
@@ -37,6 +38,7 @@
 		"@typescript-eslint/eslint-plugin": "^4.25.0",
 		"@typescript-eslint/parser": "^4.25.0",
 		"babel-loader": "^8.2.2",
+		"chromatic": "^5.8.3",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^7.27.0",
 		"eslint-config-google": "^0.14.0",

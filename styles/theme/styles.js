@@ -1,9 +1,10 @@
 const styles = {
-	global: (props) => ({
+	global: ({ colorMode }) => ({
 		body: {
-			color: props.colorMode === 'light' ? 'dark' : 'light',
-			bg: props.colorMode === 'light' ? 'dark' : 'light',
+			bg: colorMode === 'light' ? 'default.light' : 'default.dark',
+			color: colorMode === 'light' ? 'default.dark' : 'default.light',
 		},
+		'#__next': { minHeight: '100vh' },
 	}),
 };
 
