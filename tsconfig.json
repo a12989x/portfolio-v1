@@ -21,7 +21,11 @@
 		"strict": true,
 		"target": "es2018",
 		"baseUrl": ".",
-		"paths": { "@/components/*": ["components/*"], "@/styles/*": ["styles/*"], "@/utils/*": ["utils/*"] }
+		"paths": {
+			"@/components/*": ["components/*"],
+			"@/styles/*": ["styles/*"],
+			"@/utils/*": ["utils/*"]
+		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]
