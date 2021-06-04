@@ -17,46 +17,60 @@ const Footer = (): JSX.Element => {
 				justify='space-between'
 			>
 				<VStack as='section' spacing={2} align='start'>
-					<Link href='/' variant='subtle'>
+					<Link href='/' variant='subtle' isExternal={false}>
 						Home
 					</Link>
-					<Link href='/about' variant='subtle'>
+					<Link href='/about' variant='subtle' isExternal={false}>
 						About
 					</Link>
-					<Link href='/projects' variant='subtle'>
+					<Link href='/projects' variant='subtle' isExternal={false}>
 						Projects
 					</Link>
-					<Link href='/blog' variant='subtle'>
+					<Link href='/blog' variant='subtle' isExternal={false}>
 						Blog
 					</Link>
 				</VStack>
 				<VStack as='section' spacing={2} align='center'>
-					<Link href='/newsletter' variant='subtle'>
+					<Link
+						href='/newsletter'
+						variant='subtle'
+						isExternal={false}
+					>
 						Newsletter
 					</Link>
-					<Link href='/community' variant='subtle'>
+					<Link href='/community' variant='subtle' isExternal={false}>
 						Community
 					</Link>
-					<Link href='/uses' variant='subtle'>
+					<Link href='/uses' variant='subtle' isExternal={false}>
 						Uses
 					</Link>
 				</VStack>
 				<VStack as='section' spacing={2} align='end'>
-					<Link href='https://github.com/a12989x/' variant='subtle'>
+					<Link
+						href='https://github.com/a12989x/'
+						variant='subtle'
+						isExternal={false}
+					>
 						GitHub
 					</Link>
 					<Link
 						href='https://www.linkedin.com/in/codax/'
 						variant='subtle'
+						isExternal={false}
 					>
 						Linkedin
 					</Link>
-					<Link href='https://twitter.com/__codax__' variant='subtle'>
+					<Link
+						href='https://twitter.com/__codax__'
+						variant='subtle'
+						isExternal={false}
+					>
 						Twitter
 					</Link>
 					<Link
 						href='https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ'
 						variant='subtle'
+						isExternal={false}
 					>
 						YouTube
 					</Link>
