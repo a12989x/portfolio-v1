@@ -1,9 +1,8 @@
 import { Button, IconButton } from '@chakra-ui/button';
 import { useColorMode } from '@chakra-ui/color-mode';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Flex } from '@chakra-ui/layout';
 import { useMediaQuery } from '@chakra-ui/media-query';
-
-import { Moon, Sun } from '../styles/theme/icons';
 
 const Nav = ({ children }) => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -18,7 +17,9 @@ const Nav = ({ children }) => {
 					top='1rem'
 					right='1rem'
 					onClick={toggleColorMode}
-					rightIcon={colorMode === 'light' ? <Moon /> : <Sun />}
+					rightIcon={
+						colorMode === 'light' ? <MoonIcon /> : <SunIcon />
+					}
 				>
 					Lights
 					{colorMode === 'light' ? ' off' : ' on'}
@@ -35,9 +36,9 @@ const Nav = ({ children }) => {
 					}
 					icon={
 						colorMode === 'light' ? (
-							<Moon size='1.25rem' />
+							<MoonIcon size='1.25rem' />
 						) : (
-							<Sun size='1.25rem' />
+							<SunIcon size='1.25rem' />
 						)
 					}
 				/>
