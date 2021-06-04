@@ -10,7 +10,7 @@ const Header = (): JSX.Element => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
-		<Flex mb={5} as='header' p='4' justify='space-between'>
+		<Flex as='header' pt={4} mb={5} justify='space-between'>
 			<LogoIcon boxSize={10} />
 			<HStack as='nav' spacing={8}>
 				<Flex as='ul' display={{ base: 'none', lg: 'flex' }}>
