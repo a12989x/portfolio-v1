@@ -1,4 +1,3 @@
-import Sun from './sun';
-import Moon from './moon';
+import LogoIcon from './logo';
 
-export { Sun, Moon };
+export { LogoIcon };
