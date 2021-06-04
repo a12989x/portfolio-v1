@@ -4,7 +4,14 @@ const styles = {
 			bg: colorMode === 'light' ? 'default.light' : 'default.dark',
 			color: colorMode === 'light' ? 'default.dark' : 'default.light',
 		},
-		'#__next': { minHeight: '100vh' },
+		'#__next': {
+			p: '1rem 2rem',
+			mx: 'auto',
+			minHeight: 'calc(100vh - 1rem)',
+			maxW: '1000px',
+			display: 'grid',
+			gridTemplate: 'auto 1fr auto / 1fr',
+		},
 	}),
 };
 
