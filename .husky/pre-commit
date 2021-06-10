@@ -8,7 +8,7 @@ echo '🏗️👷 Checking commit, styling, testing and building your project be
 npx lint-staged ||
 (
     echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
-        ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+        Lint Staged Check Failed. Make the required changes listed above, add changes and try to commit again.'
 	false;
 )
 
