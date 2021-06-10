@@ -1,4 +1,6 @@
-const textStyles = {
+import { ThemeOverride } from '@chakra-ui/react';
+
+const textStyles: ThemeOverride = {
 	h1: {
 		fontSize: { base: '32px', lg: '56px' },
 		fontWeight: 700,

@@ -1,5 +1,7 @@
-const Heading = {
-	sizes: null,
+import { ThemeOverride } from '@chakra-ui/react';
+
+const Heading: ThemeOverride = {
+	size: null,
 	variants: {
 		h1: { textStyle: 'h1' },
 		h2: { textStyle: 'h2' },
