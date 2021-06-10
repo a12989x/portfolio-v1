@@ -1,0 +1,4 @@
+{
+	"*.{ts,tsx,js}": "npm run lint",
+	"*.{js,css,md}": "npm run prettier:lint"
+}

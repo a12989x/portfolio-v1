@@ -53,9 +53,5 @@
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
-	},
-	"lint-staged": {
-		"*.{ts,tsx,js}": "npm run lint",
-		"*.{js,css,md}": "npm run prettier:lint"
 	}
 }
