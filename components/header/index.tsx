@@ -1,6 +1,6 @@
 import { IconButton } from '@chakra-ui/button';
 import { useColorMode } from '@chakra-ui/color-mode';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { Icon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Flex, HStack } from '@chakra-ui/layout';
 
 import { LogoIcon } from '@/styles/theme/icons';
@@ -11,7 +11,7 @@ const Header = (): JSX.Element => {
 
 	return (
 		<Flex as='header' pt={4} mb={5} justify='space-between'>
-			<LogoIcon boxSize={10} />
+			<Icon as={LogoIcon} boxSize={10} />
 			<HStack as='nav' spacing={8}>
 				<Flex as='ul' display={{ base: 'none', lg: 'flex' }}>
 					<NavItem href='/'>Home</NavItem>
