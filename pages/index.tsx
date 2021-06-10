@@ -1,7 +1,8 @@
-import NextLink from 'next/link';
-import { Flex, Heading, Link, Text } from '@chakra-ui/layout';
+import { Box } from '@chakra-ui/layout';
 
-import ContainerWrapper from '@/components/ContainerWrapper';
+import Hero from '@/components/pages/home/Hero';
+import FeaturedProjects from '@/components/pages/home/FeaturedProjects';
+import Subscribe from '@/components/pages/home/Subscribe';
 
 /**
  * Home: The landing page of web app
@@ -9,24 +10,11 @@ import ContainerWrapper from '@/components/ContainerWrapper';
  */
 const Home = (): JSX.Element => {
 	return (
-		<Flex as='main' direction='column' align='center' justify='center'>
-			<ContainerWrapper>
-				<Heading as='h1' size='xl'>
-					Site under construction 🏗
-				</Heading>
-				<Text mb='1rem'>
-					You can see the GitHub repository{' '}
-					<NextLink href='https://github.com/a12989x/' passHref>
-						<Link isExternal>here</Link>
-					</NextLink>
-					.
-				</Text>
-				<Text mb='1rem'>
-					Feel free to also navigate through the pages to find out
-					what content will be on there!
-				</Text>
-			</ContainerWrapper>
-		</Flex>
+		<Box as='section'>
+			<Hero />
+			<FeaturedProjects />
+			<Subscribe />
+		</Box>
 	);
 };
 
