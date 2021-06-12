@@ -11,6 +11,10 @@ import SassIcon from './sass';
 import FirebaseIcon from './firebase';
 import FigmaIcon from './figma';
 import ReexJsIcon from './reexjs';
+import HeroIcon from './hero';
+import GitHubIcon from './github';
+import LinkedinIcon from './linkedin';
+import YouTubeIcon from './youtube';
 
 export {
 	LogoIcon,
@@ -26,4 +30,8 @@ export {
 	FirebaseIcon,
 	FigmaIcon,
 	ReexJsIcon,
+	HeroIcon,
+	GitHubIcon,
+	LinkedinIcon,
+	YouTubeIcon,
 };
