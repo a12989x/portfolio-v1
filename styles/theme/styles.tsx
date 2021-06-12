@@ -7,9 +7,9 @@ const styles: ThemeOverride = {
 			color: colorMode === 'light' ? 'default.dark' : 'default.light',
 		},
 		'#__next': {
-			p: { base: '0.5rem 1rem', sm: '1rem 2rem' },
+			p: { base: '0.5rem 1rem', sm: '2rem' },
 			mx: 'auto',
-			minHeight: 'calc(100vh - 1rem)',
+			minHeight: '100vh',
 			maxW: '1200px',
 			display: 'grid',
 			gridTemplate: 'auto 1fr auto / 1fr',
