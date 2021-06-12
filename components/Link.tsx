@@ -17,7 +17,12 @@ const Link = ({
 }: LinkProps): JSX.Element => {
 	return (
 		<NextLink href={href} passHref>
-			<ChakraLink isExternal={isExternal} variant={variant}>
+			<ChakraLink
+				isExternal={isExternal}
+				variant={variant}
+				display='flex'
+				alignItems='center'
+			>
 				{children}
 			</ChakraLink>
 		</NextLink>
