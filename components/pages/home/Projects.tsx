@@ -14,7 +14,7 @@ const Projects = (): JSX.Element => {
 				base: '1fr',
 				sm: 'repeat(auto-fill, minmax(450px, 1fr))',
 			}}
-			gap={4}
+			gap={8}
 		>
 			{projects
 				.filter(({ feature }) => feature)

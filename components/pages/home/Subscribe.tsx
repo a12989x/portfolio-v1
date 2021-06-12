@@ -60,9 +60,9 @@ const Subscribe: FunctionComponent = (): JSX.Element => {
 	return (
 		<Box
 			as='section'
-			py={8}
-			px={12}
-			mt={60}
+			py={{ base: 4, sm: 8 }}
+			px={{ base: 6, sm: 12 }}
+			mt={{ base: 32, sm: 60 }}
 			mx='auto'
 			maxW='45rem'
 			border='2px solid'
