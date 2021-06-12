@@ -1,38 +1,48 @@
 import { VStack } from '@chakra-ui/layout';
+import React from 'react';
 
-import Link from '../Link';
+import { github, linkedin, twitter, youtube } from '@/data/socials';
+
+import SocialLink from './SocialLink';
 
 const Socials = (): JSX.Element => {
 	return (
-		<VStack as='section' spacing={2} align='end'>
-			<Link
-				href='https://github.com/a12989x/'
-				variant='subtle'
-				isExternal={false}
+		<VStack as='ul' spacing={2} align='end'>
+			<SocialLink
+				href={github.href}
+				name={github.name}
+				icon={github.icon}
+				color={github.color}
 			>
 				GitHub
-			</Link>
-			<Link
-				href='https://www.linkedin.com/in/codax/'
-				variant='subtle'
-				isExternal={false}
+			</SocialLink>
+
+			<SocialLink
+				href={linkedin.href}
+				name={linkedin.name}
+				icon={linkedin.icon}
+				color={linkedin.color}
 			>
 				Linkedin
-			</Link>
-			<Link
-				href='https://twitter.com/__codax__'
-				variant='subtle'
-				isExternal={false}
+			</SocialLink>
+
+			<SocialLink
+				href={twitter.href}
+				name={twitter.name}
+				icon={twitter.icon}
+				color={twitter.color}
 			>
 				Twitter
-			</Link>
-			<Link
-				href='https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ'
-				variant='subtle'
-				isExternal={false}
+			</SocialLink>
+
+			<SocialLink
+				href={youtube.href}
+				name={youtube.name}
+				icon={youtube.icon}
+				color={youtube.color}
 			>
 				YouTube
-			</Link>
+			</SocialLink>
 		</VStack>
 	);
 };

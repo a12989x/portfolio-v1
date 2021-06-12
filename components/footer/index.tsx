@@ -1,24 +1,17 @@
-import { Divider, HStack, Text, VStack } from '@chakra-ui/layout';
+import { Divider, Text, VStack } from '@chakra-ui/layout';
 
-import MainRoutes from './MainRoutes';
-import Socials from './Socials';
-import SubRoutes from './SubRoutes';
+import { useMediaQuery } from '@chakra-ui/media-query';
+
+import Links from './Links';
+import MobileLinks from './MobileLinks';
 
 const Footer = (): JSX.Element => {
+	const [isMobile] = useMediaQuery('(max-width: 479px)');
+
 	return (
-		<VStack as='section' mt={40} spacing={10}>
+		<VStack as='footer' mt={{ base: 20, sm: 40 }} spacing={10}>
 			<Divider borderColor='neutral.200' />
-			<HStack
-				as='footer'
-				w='100%'
-				maxW='800px'
-				align='start'
-				justify='space-between'
-			>
-				<MainRoutes />
-				<SubRoutes />
-				<Socials />
-			</HStack>
+			{isMobile ? <MobileLinks /> : <Links />}
 			<Text>Copyright © 2021 Alexis Guzman</Text>
 		</VStack>
 	);
