@@ -1,43 +1,29 @@
-import { IconButton } from '@chakra-ui/button';
-import { useColorMode } from '@chakra-ui/color-mode';
-import { Icon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { Flex, HStack } from '@chakra-ui/layout';
+import { Icon } from '@chakra-ui/icons';
+import { Flex } from '@chakra-ui/layout';
+
+import { useMediaQuery } from '@chakra-ui/media-query';
+import MenuToggleHookInterface from '@/interfaces/MenuToggleHook';
 
 import { LogoIcon } from '@/styles/theme/icons';
-import NavItem from './NavItem';
+import Nav from './Nav';
+import ToggleButton from './ToggleButton';
+import MenuButton from './MenuButton';
 
-const Header = (): JSX.Element => {
-	const { colorMode, toggleColorMode } = useColorMode();
+const Header = ({
+	isMenuOpen,
+	toggleMenu,
+}: MenuToggleHookInterface): JSX.Element => {
+	const [isSmallScreen] = useMediaQuery('(max-width: 479px)');
 
 	return (
-		<Flex as='header' pt={4} mb={5} justify='space-between'>
-			<Icon as={LogoIcon} boxSize={10} />
-			<HStack as='nav' spacing={8}>
-				<Flex as='ul' display={{ base: 'none', lg: 'flex' }}>
-					<NavItem href='/'>Home</NavItem>
-					<NavItem href='/about'>About</NavItem>
-					<NavItem href='/projects'>Projects</NavItem>
-					<NavItem href='/blog'>Blog</NavItem>
-				</Flex>
-
-				<IconButton
-					borderRadius='sm'
-					variant='icon'
-					onClick={toggleColorMode}
-					aria-label={
-						colorMode === 'light'
-							? 'Toggle dark mode'
-							: 'Toggle light Mode'
-					}
-					icon={
-						colorMode === 'light' ? (
-							<MoonIcon size='1.25rem' />
-						) : (
-							<SunIcon size='1.25rem' />
-						)
-					}
-				/>
-			</HStack>
+		<Flex as='header' mb={5} justify='space-between' align='center'>
+			{isSmallScreen && <ToggleButton />}
+			<Icon as={LogoIcon} boxSize={8} />
+			{!isSmallScreen ? (
+				<Nav />
+			) : (
+				<MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+			)}
 		</Flex>
 	);
 };
