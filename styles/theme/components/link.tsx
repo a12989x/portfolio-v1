@@ -15,6 +15,15 @@ const Link: ThemeOverride = {
 				textDecoration: 'none',
 			},
 		}),
+		large: ({ colorMode }: { colorMode: string }): ChakraProps => ({
+			fontSize: '1.25rem',
+			color: colorMode === 'light' ? 'neutral.600' : 'default.light',
+			textDecoration: 'none',
+			_hover: {
+				color: colorMode === 'light' ? 'default.dark' : 'neutral.200',
+				textDecoration: 'none',
+			},
+		}),
 	},
 	defaultProps: {
 		variant: 'default',
