@@ -16,7 +16,11 @@ const Layout = ({ children }: { children: ReactNode }): JSX.Element => {
 		<>
 			<Head />
 			<Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-			{isMenuOpen && isSmallScreen ? <MobileNav /> : children}
+			{isMenuOpen && isSmallScreen ? (
+				<MobileNav toggleMenu={toggleMenu} />
+			) : (
+				children
+			)}
 			<Footer />
 		</>
 	);

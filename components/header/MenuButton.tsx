@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { IconButton } from '@chakra-ui/button';
 
 import MenuIcon from './MenuIcon';
@@ -9,12 +7,6 @@ const MenuButton = ({
 	isMenuOpen,
 	toggleMenu,
 }: MenuToggleHookInterface): JSX.Element => {
-	const router = useRouter();
-
-	useEffect(() => {
-		toggleMenu();
-	}, [router.route]);
-
 	return (
 		<IconButton
 			borderRadius='sm'
