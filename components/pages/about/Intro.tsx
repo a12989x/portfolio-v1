@@ -14,7 +14,7 @@ const Intro = (): JSX.Element => {
 				Hey there! I’m Alexis, a self-taught developer exploring what’s
 				possible on the web.
 			</Text>
-			<Text mb={10}>
+			<Text mb={20}>
 				I like to spend my time building projects that interest me, as
 				well as pushing myself to learn more through open source
 				projects and share my knowledge with other developers.
@@ -23,7 +23,7 @@ const Intro = (): JSX.Element => {
 			<Heading as='h3' size='md' mb={1}>
 				What I’ve been up to
 			</Heading>
-			<Text mb={10}>
+			<Text mb={20}>
 				I{"'"}ve been recently focused on building React (specifically
 				Next.js) applications, using popular tools such as Chakra UI and
 				to help me bring my designs.
