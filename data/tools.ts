@@ -52,7 +52,7 @@ export const nodejs: ToolInterface = {
 export const nextjs: ToolInterface = {
 	name: 'Next.js',
 	icon: NextIcon,
-	color: '#000000',
+	color: 'currentColor',
 	id: 6,
 };
 
