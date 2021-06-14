@@ -1,30 +1,17 @@
 import { ReactNode } from 'react';
 import NextLink from 'next/link';
-import { Link as ChakraLink } from '@chakra-ui/layout';
+import { Link as ChakraLink, LinkProps } from '@chakra-ui/layout';
 
-interface LinkProps {
+interface LinkInterface extends LinkProps {
 	href: string;
-	isExternal?: boolean;
 	children: ReactNode;
-	variant?: string;
+	props?: LinkProps;
 }
 
-const Link = ({
-	href,
-	isExternal = true,
-	children,
-	variant = 'default',
-}: LinkProps): JSX.Element => {
+const Link = ({ href, children, ...props }: LinkInterface): JSX.Element => {
 	return (
 		<NextLink href={href} passHref>
-			<ChakraLink
-				isExternal={isExternal}
-				variant={variant}
-				display='flex'
-				alignItems='center'
-			>
-				{children}
-			</ChakraLink>
+			<ChakraLink {...props}>{children}</ChakraLink>
 		</NextLink>
 	);
 };
