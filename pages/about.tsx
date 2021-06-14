@@ -1,6 +1,8 @@
-import { Flex, Heading, Text } from '@chakra-ui/layout';
+import { VStack } from '@chakra-ui/layout';
 
-import ContainerWrapper from '@/components/ContainerWrapper';
+import Intro from '@/components/pages/about/Intro';
+import Skills from '@/components/pages/about/Skills';
+import Contact from '@/components/pages/about/Contact';
 
 /**
  * About: About page will contain information about my background, skill set and hobbies outside of tech.
@@ -8,20 +10,11 @@ import ContainerWrapper from '@/components/ContainerWrapper';
  */
 const About = (): JSX.Element => {
 	return (
-		<Flex as='main' direction='column' align='center' justify='center'>
-			<ContainerWrapper>
-				<Heading as='h1' size='xl'>
-					About 👨‍💻
-				</Heading>
-				<Text mb='1rem'>
-					This page will contain information about my background,
-					skill set and hobbies outside of tech.
-				</Text>
-				<Text mb='1rem'>
-					It will also contain info about how to get in touch with me.
-				</Text>
-			</ContainerWrapper>
-		</Flex>
+		<VStack as='section' mx='auto' w='100%' maxW='800px' spacing={28}>
+			<Intro />
+			<Skills />
+			<Contact />
+		</VStack>
 	);
 };
 
