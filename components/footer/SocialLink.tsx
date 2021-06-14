@@ -29,7 +29,13 @@ const SocialLink = ({
 
 	return (
 		<VStack as='li' onMouseEnter={toggleHover} onMouseLeave={toggleHover}>
-			<Link href={href} variant='subtle'>
+			<Link
+				href={href}
+				variant='subtle'
+				display='flex'
+				alignItems='center'
+				isExternal
+			>
 				<Icon
 					transform={isHover ? 'translateY(-4px)' : 'none'}
 					transitionDuration='500ms'

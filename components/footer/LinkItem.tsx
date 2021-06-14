@@ -11,7 +11,7 @@ interface LinkInterface {
 const LinkItem = ({ href, children }: LinkInterface): JSX.Element => {
 	return (
 		<VStack as='li'>
-			<Link href={href} variant='subtle' isExternal={false}>
+			<Link href={href} variant='subtle'>
 				{children}
 			</Link>
 		</VStack>
