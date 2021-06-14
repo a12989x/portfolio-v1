@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import { Heading, VStack } from '@chakra-ui/layout';
 import { Button } from '@chakra-ui/button';
-import Projects from './Projects';
+import Projects from '../../Projects';
 
 const FeaturedProjects = (): JSX.Element => {
 	return (
@@ -10,7 +10,7 @@ const FeaturedProjects = (): JSX.Element => {
 				Featured Projects
 			</Heading>
 
-			<Projects />
+			<Projects featured />
 
 			<NextLink href='/projects' passHref>
 				<Button
