@@ -1,16 +1,18 @@
 import { ReactNode } from 'react';
 import NextLink from 'next/link';
-import { VStack, Link as ChakraLink, Box } from '@chakra-ui/layout';
-interface NavItemProps {
+import { VStack, Link as ChakraLink, Box, LinkProps } from '@chakra-ui/layout';
+interface NavItemProps extends LinkProps {
 	href: string;
 	variant?: string;
 	children: ReactNode;
+	props?: LinkProps;
 }
 
 const NavItem = ({
 	href,
 	children,
 	variant = 'subtle',
+	...props
 }: NavItemProps): JSX.Element => {
 	return (
 		<VStack as='li' h='100%' align='start' listStyleType='none'>
@@ -63,6 +65,7 @@ const NavItem = ({
 								'transform 0.3s cubic-bezier(0.2, 1, 0.8, 1)',
 						},
 					}}
+					{...props}
 				>
 					<Box as='span'>{children}</Box>
 				</ChakraLink>
