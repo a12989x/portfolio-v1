@@ -15,6 +15,8 @@ import HeroIcon from './hero';
 import GitHubIcon from './github';
 import LinkedinIcon from './linkedin';
 import YouTubeIcon from './youtube';
+import AlanAiIcon from './alanai';
+import NewspaperIcon from './newspaper';
 
 export {
 	LogoIcon,
@@ -34,4 +36,6 @@ export {
 	GitHubIcon,
 	LinkedinIcon,
 	YouTubeIcon,
+	AlanAiIcon,
+	NewspaperIcon,
 };
