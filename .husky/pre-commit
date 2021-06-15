@@ -4,11 +4,19 @@
 echo '🏗️👷 Checking commit, styling, testing and building your project before committing
 '
 
-# 
-npx lint-staged ||
+# Check lint on staged area
+npm run lint-staged ||
 (
-    echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
+    echo '🤬😤🤬 Seriously try again son of b**ch! 🤬😤🤬 
         Lint Staged Check Failed. Make the required changes listed above, add changes and try to commit again.'
+	false;
+)
+
+# Check ESLint for next js
+npm run next-lint ||
+(
+    echo '😡😒👺 OMG! make that s**t really work! 😡😒👺
+        Next Lint Check Failed. Make the required changes listed above, add changes and try to commit again.'
 	false;
 )
 
@@ -48,4 +56,4 @@ npm run build ||
 )
 
 # If everything passes... Now we can commit
-echo '✅✅✅✅ You win this time... I am trying to committ this now. 🤔 ✅✅✅✅'
+echo '✅✅✅✅ You win this time... I am trying to committ this now. 🤯 ✅✅✅✅'
