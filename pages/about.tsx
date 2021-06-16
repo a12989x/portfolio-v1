@@ -1,5 +1,6 @@
 import { VStack } from '@chakra-ui/layout';
 
+import Seo from '@/components/Seo';
 import Intro from '@/components/pages/about/Intro';
 import Skills from '@/components/pages/about/Skills';
 import Contact from '@/components/pages/about/Contact';
@@ -11,6 +12,8 @@ import Contact from '@/components/pages/about/Contact';
 const About = (): JSX.Element => {
 	return (
 		<VStack as='section' mx='auto' w='100%' maxW='800px' spacing={28}>
+			<Seo name='About 👨‍💻' path='/about' />
+
 			<Intro />
 			<Skills />
 			<Contact />

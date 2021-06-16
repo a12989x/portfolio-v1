@@ -1,5 +1,6 @@
 import { Box, Heading, Text } from '@chakra-ui/layout';
 
+import Seo from '@/components/Seo';
 import AllProjects from '@/components/Projects';
 
 /**
@@ -9,6 +10,8 @@ import AllProjects from '@/components/Projects';
 const Projects = (): JSX.Element => {
 	return (
 		<Box as='main' mx='auto' width='100%'>
+			<Seo name='Projects 🎲' path='/projects' />
+
 			<Heading
 				as='h1'
 				size='2xl'

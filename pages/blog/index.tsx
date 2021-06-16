@@ -1,5 +1,6 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout';
 
+import Seo from '@/components/Seo';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import Link from '@/components/Link';
 
@@ -10,9 +11,11 @@ import Link from '@/components/Link';
 const Blog = (): JSX.Element => {
 	return (
 		<Flex as='main' direction='column' align='center' justify='center'>
+			<Seo name='Blog 🖊️' path='/blog' />
+
 			<ContainerWrapper>
 				<Heading as='h1' size='xl'>
-					Blog 🎲
+					Blog 🖊️
 				</Heading>
 				<Text mb='1rem'>
 					This page will contain a list of posts I&apos;ve written on{' '}

@@ -1,5 +1,6 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout';
 
+import Seo from '@/components/Seo';
 import ContainerWrapper from '@/components/ContainerWrapper';
 
 /**
@@ -9,6 +10,8 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 const Uses = (): JSX.Element => {
 	return (
 		<Flex as='main' direction='column' align='center' justify='center'>
+			<Seo name='Uses 🔌' path='/uses' />
+
 			<ContainerWrapper>
 				<Heading as='h1' size='xl'>
 					Uses 🔌
