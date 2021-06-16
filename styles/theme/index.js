@@ -1,5 +1,8 @@
 import { extendTheme } from '@chakra-ui/react';
 
+// Color mode config overrides
+import config from './config';
+
 // Global styles overrides
 import styles from './styles';
 
@@ -13,6 +16,7 @@ import Link from './components/link';
 import Text from './components/text';
 
 const overrides = {
+	config,
 	styles,
 	fonts,
 	colors,

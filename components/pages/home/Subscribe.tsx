@@ -94,22 +94,14 @@ const Subscribe: FunctionComponent = (): JSX.Element => {
 							placeholder='jimmy@choo.com'
 						/>
 						<InputRightElement minW='8rem'>
-							{isLoading && true ? (
-								<Button
-									w='100%'
-									isLoading
-									variant='secondaryThemed'
-									_hover={{ variant: 'secondaryThemed' }}
-								/>
-							) : (
-								<Button
-									w='100%'
-									variant='secondaryThemed'
-									type='submit'
-								>
-									Subscribe
-								</Button>
-							)}
+							<Button
+								w='100%'
+								variant='primary'
+								type='submit'
+								isLoading={isLoading}
+							>
+								Subscribe
+							</Button>
 						</InputRightElement>
 					</InputGroup>
 				</FormControl>

@@ -13,14 +13,7 @@ const FeaturedProjects = (): JSX.Element => {
 			<Projects featured />
 
 			<NextLink href='/projects' passHref>
-				<Button
-					as='a'
-					display='block'
-					fontSize={{ base: 'lg', lg: 'xl' }}
-					textAlign='center'
-					textTransform='capitalize'
-					variant='secondaryThemed'
-				>
+				<Button as='a' variant='primary'>
 					See all projects
 				</Button>
 			</NextLink>

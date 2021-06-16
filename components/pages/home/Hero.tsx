@@ -58,7 +58,7 @@ const Hero = (): JSX.Element => {
 						target='_blank'
 						rel='noopener noreferrer'
 						size='lg'
-						variant='primaryThemed'
+						variant='primary'
 					>
 						Get In Touch
 					</Button>

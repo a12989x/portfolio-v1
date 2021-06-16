@@ -14,7 +14,7 @@ const MenuButton = ({
 			w='48px'
 			h='48px'
 			display={{ base: 'block', lg: 'none' }}
-			variant='ghost'
+			variant='unstyled'
 			aria-label='menu toggle button'
 			_hover={{ variant: 'ghost' }}
 			icon={<MenuIcon isOpen={isMenuOpen} />}

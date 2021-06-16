@@ -4,9 +4,7 @@ import { ChakraProps } from '@chakra-ui/system';
 const Link: ThemeOverride = {
 	baseStyle: {},
 	variants: {
-		default: ({ colorMode }: { colorMode: string }): ChakraProps => ({
-			color: colorMode === 'light' ? 'primary.500' : 'secondary.300',
-		}),
+		default: { color: 'primary.500' },
 		subtle: ({ colorMode }: { colorMode: string }): ChakraProps => ({
 			color: colorMode === 'light' ? 'neutral.600' : 'default.light',
 			textDecoration: 'none',

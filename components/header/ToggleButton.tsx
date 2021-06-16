@@ -9,7 +9,6 @@ const ToggleButton = (): JSX.Element => {
 	return (
 		<IconButton
 			borderRadius='sm'
-			variant='icon'
 			onClick={toggleColorMode}
 			aria-label={
 				colorMode === 'light' ? 'Toggle dark mode' : 'Toggle light Mode'
@@ -18,7 +17,7 @@ const ToggleButton = (): JSX.Element => {
 				colorMode === 'light' ? (
 					<MoonIcon size={6} />
 				) : (
-					<SunIcon size='1.25rem' />
+					<SunIcon size={6} />
 				)
 			}
 		/>

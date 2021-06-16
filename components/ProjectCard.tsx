@@ -71,16 +71,16 @@ const ProjectCard = ({
 
 				<HStack>
 					{live && (
-						<Button as='a' href={live} variant='primary'>
+						<Button as='a' href={live} variant='primaryOutline'>
 							Visit Site
 						</Button>
 					)}
 					{proto && (
-						<Button as='a' href={proto} variant='primary'>
+						<Button as='a' href={proto} variant='primaryOutline'>
 							Prototype
 						</Button>
 					)}
-					<Button as='a' href={repo} variant='secondary'>
+					<Button as='a' href={repo} variant='outline'>
 						View Code
 					</Button>
 				</HStack>
