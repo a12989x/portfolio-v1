@@ -1,18 +1,23 @@
-# Portfolio
+# Codax Portfolio
+
+## Intro
 
 This is the first version of my website built in Next.js.
 
-Live preview - [Production Env](https://codaxx.ml)
+Live preview:
+
+-   Preview Environment: [codaxx.ml/](https://codaxx.ml)
+-   Production Environment: [codaxx-prod.vercel.app/](https://codaxx.ml)
 
 This project is bootstrapped with [`reexjs-cli`](https://a12989x.github.io/reexjs-cli/).
 
 ## Running the project locally
 
--   Clone the project locally
+-   Clone the project locally:
     -   `git clone https://github.com/a12989x/portfolio-v1/`
 -   Install the dependencies.
     -   `npm install` or `npm i` or `yarn`
--   Run the development server
+-   Run the development server:
     -   `npm run dev` or `yarn dev`
 -   Finally open [`localhost:3000`](localhost:3000/)
 
@@ -25,10 +30,10 @@ This project is bootstrapped with [`reexjs-cli`](https://a12989x.github.io/reexj
 -   [ESLint](https://eslint.org/)
 -   [Husky](https://typicode.github.io/husky/#/)
 -   [cz-cli](http://commitizen.github.io/cz-cli/)
-
-Pendding
-
 -   [Checkly](https://www.checklyhq.com/)
+
+Pending
+
 -   [Jest](https://jestjs.io/)
 -   [React Testing Library](https://testing-library.com/)
 
