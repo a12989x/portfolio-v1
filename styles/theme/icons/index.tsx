@@ -17,6 +17,7 @@ import LinkedinIcon from './linkedin';
 import YouTubeIcon from './youtube';
 import AlanAiIcon from './alanai';
 import NewspaperIcon from './newspaper';
+import TypescriptIcon from './typescript';
 
 export {
 	LogoIcon,
@@ -38,4 +39,5 @@ export {
 	YouTubeIcon,
 	AlanAiIcon,
 	NewspaperIcon,
+	TypescriptIcon,
 };
