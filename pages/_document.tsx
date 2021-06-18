@@ -36,7 +36,7 @@ class MyDocument extends Document {
 	render(): JSX.Element {
 		return (
 			<Html>
-				<Head />
+				<Head lang='en' />
 				<body>
 					<ColorModeScript
 						initialColorMode={theme.config.initialColorMode}
