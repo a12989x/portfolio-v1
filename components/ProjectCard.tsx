@@ -21,7 +21,6 @@ const ProjectCard = ({
 	description,
 	tools,
 	live,
-	proto,
 	repo,
 }: ProjectsInterface): JSX.Element => {
 	const { blackColor, whiteColor, greyColor } = useColorModeValues();
@@ -73,11 +72,6 @@ const ProjectCard = ({
 					{live && (
 						<Button as='a' href={live} variant='primaryOutline'>
 							Visit Site
-						</Button>
-					)}
-					{proto && (
-						<Button as='a' href={proto} variant='primaryOutline'>
-							Prototype
 						</Button>
 					)}
 					<Button as='a' href={repo} variant='outline'>

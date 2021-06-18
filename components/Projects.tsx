@@ -32,7 +32,6 @@ const Projects = ({
 					tools,
 					description,
 					live,
-					proto,
 					repo,
 					id,
 				}: ProjectsInterface) => (
@@ -42,7 +41,6 @@ const Projects = ({
 						title={title}
 						tools={tools}
 						live={live}
-						proto={proto}
 						description={description}
 						repo={repo}
 						key={id}
