@@ -25,7 +25,7 @@ const Subscribe: FunctionComponent = (): JSX.Element => {
 		e.preventDefault();
 		setIsLoading(true);
 
-		const data = { email: inputValue, otherValue: 'hello world' };
+		const data = { email: inputValue };
 		const options = {
 			body: JSON.stringify(data),
 			method: 'POST',
