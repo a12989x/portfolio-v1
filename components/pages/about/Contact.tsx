@@ -1,22 +1,23 @@
-import { Box, Text } from '@chakra-ui/layout';
+import { Box, SimpleGrid } from '@chakra-ui/layout';
 
-import Link from '@/components/Link';
 import SectionHeading from './SectionHeading';
+import ContactText from './ContactText';
+import ContactForm from './ContactForm';
 
 const Contact = (): JSX.Element => {
 	return (
 		<Box p={{ base: '1rem', md: 0 }} w='100%' as='section'>
 			<SectionHeading>Get in touch</SectionHeading>
-			<Text mx='auto' maxW='container.sm'>
-				I{"'"}m currently looking for part-time, full-time and freelance
-				roles. If you{"'"}re interested in hiring me, would like to
-				collaborate on a project, or would just like to say hi, then
-				feel free to drop me an{' '}
-				<Link href='mailto:codaxtech@gmail.com' isExternal>
-					email
-				</Link>
-				. I{"'"}ll endeavour to get back to you as soon as I can!
-			</Text>
+			<SimpleGrid
+				mx='auto'
+				maxW='container.sm'
+				columns={{ base: 1, md: 2 }}
+				spacing={10}
+			>
+				<ContactText />
+
+				<ContactForm />
+			</SimpleGrid>
 		</Box>
 	);
 };
