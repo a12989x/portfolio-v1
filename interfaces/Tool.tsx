@@ -4,7 +4,7 @@ interface ToolInterface {
 	name: string;
 	icon: FunctionComponent;
 	color: string;
-	id: number;
+	id: string;
 }
 
 export default ToolInterface;

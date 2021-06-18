@@ -1,5 +1,8 @@
 import { FunctionComponent } from 'react';
+
 import ToolInterface from './Tool';
+
+// type UUID = { string }
 
 interface ProjectsInterface {
 	logo: FunctionComponent;
@@ -7,9 +10,8 @@ interface ProjectsInterface {
 	description: string;
 	tools: Array<ToolInterface>;
 	live: string | null;
-	proto: null | string;
 	repo: string;
-	id?: number;
+	id?: string;
 	feature?: boolean;
 }
 
