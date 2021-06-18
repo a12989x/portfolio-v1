@@ -12,7 +12,7 @@
 		"lint-staged": "npx lint-staged",
 		"lint": "eslint . --ext ts --ext tsx --ext js",
 		"prettier:lint": "prettier --write .",
-		"test-all": "npm run check-types && npm run check-format && npm run check-lint && npm run build",
+		"test-all": "npm run types && npm run prettier && npm run lint && npm run build",
 		"prepare": "husky install",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
@@ -27,7 +27,8 @@
 		"next": "^11.0.0",
 		"next-seo": "^4.25.1",
 		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react-dom": "^17.0.2",
+		"uuid": "^3.4.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
@@ -38,6 +39,7 @@
 		"@storybook/react": "^6.2.9",
 		"@types/node": "^15.6.1",
 		"@types/react": "^17.0.8",
+		"@types/uuid": "^8.3.0",
 		"@typescript-eslint/eslint-plugin": "^4.25.0",
 		"@typescript-eslint/parser": "^4.25.0",
 		"babel-loader": "^8.2.2",
