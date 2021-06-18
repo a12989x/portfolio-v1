@@ -57,6 +57,7 @@ const Button: ThemeOverride = {
 			color: colorMode === 'light' ? 'default.light' : 'default.dark',
 			_hover: {
 				bg: 'primary.600',
+				_disabled: { bg: 'primary.600' },
 			},
 		}),
 		primaryOutline: ({
