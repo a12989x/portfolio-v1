@@ -4,22 +4,6 @@
 echo '🏗️👷 Checking commit, styling, testing and building your project before committing
 '
 
-# Check lint on staged area
-npm run lint-staged ||
-(
-    echo '🤬😤🤬 Seriously try again son of b**ch! 🤬😤🤬 
-        Lint Staged Check Failed. Make the required changes listed above, add changes and try to commit again.'
-	false;
-)
-
-# Check ESLint for next js
-npm run next-lint ||
-(
-    echo '😡😒👺 OMG! make that s**t really work! 😡😒👺
-        Next Lint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-	false;
-)
-
 # Check Prettier standards
 npm run prettier ||
 (
@@ -28,20 +12,12 @@ npm run prettier ||
     false;
 )
 
-# Check ESLint Standards
-npm run lint ||
+# Check Next ESLint 
+npm run next-lint ||
 (
-	echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
-        ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-    false; 
-)
-
-# Check tsconfig standards
-npm run types ||
-(
-    echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
-            Are you seriously trying to write that? Make the changes required above.'
-    false;
+    echo '😡😒👺 OMG! make that s**t really work! 😡😒👺
+        Next Lint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+	false;
 )
 
 # If everything passes... Now we can commit
