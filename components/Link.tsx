@@ -1,12 +1,7 @@
-import { ReactNode } from 'react';
 import NextLink from 'next/link';
-import { Link as ChakraLink, LinkProps } from '@chakra-ui/layout';
+import { Link as ChakraLink } from '@chakra-ui/layout';
 
-interface LinkInterface extends LinkProps {
-	href: string;
-	children: ReactNode;
-	props?: LinkProps;
-}
+import LinkInterface from '@/interfaces/Link';
 
 const Link = ({ href, children, ...props }: LinkInterface): JSX.Element => {
 	return (
