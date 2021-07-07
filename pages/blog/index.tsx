@@ -1,33 +1,66 @@
-import { Flex, Heading, Text } from '@chakra-ui/layout';
+import React, { ChangeEvent, useState } from 'react';
+import { GetStaticProps } from 'next';
+import { Box, VStack } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/layout';
+
+import { getPostsFrontMatter } from '@/utils/mdx';
 
 import Seo from '@/components/Seo';
-import ContainerWrapper from '@/components/ContainerWrapper';
-import Link from '@/components/Link';
+import BlogItem from '@/components/pages/blog/BlogItem';
+import SearchBar from '@/components/pages/blog/SearchBar';
+
+export const getStaticProps: GetStaticProps = async () => {
+	const posts = await getPostsFrontMatter();
+
+	return { props: { posts } };
+};
+
+interface BlogInterface {
+	title: string;
+	publishedAt: string;
+	summary?: string;
+	image: string;
+	imageBlur: string;
+	slug?: string;
+}
 
 /**
  * Blog: Blog page will contain a list of Blog I've written.
  * @return {JSX.Element} The JSX Code for the Blog page component
  */
-const Blog = (): JSX.Element => {
+const Blog = ({ posts }: { posts: BlogInterface[] }): JSX.Element => {
+	const [searchValue, setSearchValue] = useState('');
+	const filteredBlogPosts = posts
+		.sort(
+			(a, b) =>
+				Number(new Date(b.publishedAt)) -
+				Number(new Date(a.publishedAt))
+		)
+		.filter((frontMatter) =>
+			frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
+		);
+
 	return (
-		<Flex as='main' direction='column' align='center' justify='center'>
+		<VStack as='main' mx='auto' w='100%' maxW='800px' spacing={8}>
 			<Seo name='Blog 🖊️' path='/blog' />
 
-			<ContainerWrapper>
-				<Heading as='h1' size='xl'>
-					Blog 🖊️
-				</Heading>
-				<Text mb='1rem'>
-					This page will contain a list of posts I&apos;ve written on{' '}
-					<Link href='https://codax.hashnode.com'>Hashnode</Link> and{' '}
-					<Link href='https://dev.to/_codax_'>Dev.to</Link>
-				</Text>
-				<Text mb='1rem'>
-					It will be home to all of my thoughts and ideas around web
-					development and design.
-				</Text>
-			</ContainerWrapper>
-		</Flex>
+			<Heading as='h1' size='2xl' mt={12} mb={20} w='100%'>
+				Blog 🖊️
+			</Heading>
+
+			<SearchBar
+				value={searchValue}
+				handleChange={(e: ChangeEvent<HTMLInputElement>) =>
+					setSearchValue(e.target.value)
+				}
+			/>
+
+			<Box as='section'>
+				{filteredBlogPosts.map((post) => (
+					<BlogItem key={post.title} {...post} />
+				))}
+			</Box>
+		</VStack>
 	);
 };
 
