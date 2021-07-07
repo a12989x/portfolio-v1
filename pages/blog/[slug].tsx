@@ -35,7 +35,7 @@ const Blog = ({ mdxSource, frontMatter }: PostDataInterface): JSX.Element => {
 	return (
 		<Box as='main' mx='auto' maxW='800px' w='100%'>
 			<Image
-				className='post-images'
+				className='cover-image'
 				src={frontMatter.image}
 				alt='cover'
 				height={420}
