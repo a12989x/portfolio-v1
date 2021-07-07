@@ -18,7 +18,21 @@ export const getPostBySlug = async (
 
 	const { data, content } = matter(source);
 	const mdxSource = await serialize(content, {
-		mdxOptions: { remarkPlugins: [], rehypePlugins: [mdxPrism] },
+		mdxOptions: {
+			remarkPlugins: [
+				require('remark-slug'),
+				[
+					require('remark-autolink-headings'),
+					{
+						linkProperties: {
+							className: ['anchor'],
+						},
+					},
+				],
+				require('remark-code-titles'),
+			],
+			rehypePlugins: [mdxPrism],
+		},
 	});
 
 	return {
@@ -26,7 +40,33 @@ export const getPostBySlug = async (
 		frontMatter: {
 			wordCount: content.split(/\s+/gu).length,
 			readingTime: readingTime(content),
-			...data,
+			title: data.title,
+			publishedAt: data.publishedAt || '-- -- --',
+			summary: data.summary || '',
+			image:
+				data.image ||
+				'https://via.placeholder.com/800x336?text=cover+image',
+			imageBlur:
+				data.imageBlur ||
+				'https://via.placeholder.com/800x336?text=cover+image',
 		},
 	};
+};
+
+export const getPostsFrontMatter = async (): Promise<string> => {
+	const files = await getPosts();
+
+	// @ts-expect-error: missing return type.
+	return files.reduce((allPosts, postSlug) => {
+		const source = readFileSync(`${POSTS_PATH}/${postSlug}`, 'utf8');
+		const { data } = matter(source);
+
+		return [
+			{
+				...data,
+				slug: postSlug.replace('.mdx', ''),
+			},
+			...allPosts,
+		];
+	}, []);
 };
