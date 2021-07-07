@@ -1,0 +1,55 @@
+---
+title: How to uppercase the first letter of a string in JavaScript
+publishedAt: May 28, 2021
+summary: JavaScript offers many ways to capitalize a string to make the first character uppercase. Learn the various ways, and also find out which one you should use, using plain JavaScript.
+image: https://res.cloudinary.com/codax/image/upload/v1625607992/blog/3/cover.png
+imageBlur: https://res.cloudinary.com/codax/image/upload/v1625608501/blog/3/cover_blur.jpg
+---
+
+JavaScript offers many ways to capitalize a string to make the first character uppercase. Learn the various ways, and also find out which one you should use, using plain JavaScript.
+
+## 1. chartAt + slice
+
+The first way to do this is through a combination of `cartAt()` and `slice()`. With `chartAt()` uppercases the first letter, and with `slice()` slices the string and returns it starting from the second character:
+
+```javascript
+const name = 'codax';
+const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+// expected output: "Codax"
+```
+
+You can create a function to do that:
+
+```javascript
+const capitalize = (s) => {
+	return s.charAt(0).toUpperCase() + s.slice(1);
+};
+
+capitalize('codax'); // "Codax"
+```
+
+## 2. Replace function
+
+My favorite is with `replace()` because I love regex (even if I'm not an expert) and regex is more customizable in general.
+
+```javascript
+const name = 'codax';
+const nameCapitalized = name.replace(/^\w/, (c) => c.toUpperCase()));
+// expected output: "Codax"
+```
+
+You can also make it a function:
+
+```javascript
+const capitalize = (s) =>
+  return s.replace(/^\w/, (c) => c.toUpperCase()));
+}
+
+capitalize('codax'); // "Codax"
+```
+
+### Conclusion
+
+For readability, I recommend the first option (`chartAt` + `slice`), and for speed, I recommend the second option (`replace`).
+If you know other/better ways please leave below in the comments, or how to improve on the ones mentioned here.
+Thanks.

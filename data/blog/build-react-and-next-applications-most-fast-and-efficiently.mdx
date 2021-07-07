@@ -1,0 +1,80 @@
+---
+title: Build React and Next applications most fast and efficiently
+publishedAt: March 19, 2021
+summary: Usually, developers spent a lot of time installing dependencies, creating folders, etc, before having our initial configuration and start working on the application.
+image: https://res.cloudinary.com/codax/image/upload/v1625607992/blog/3/cover.png
+imageBlur: https://res.cloudinary.com/codax/image/upload/v1625608501/blog/3/cover_blur.jpg
+---
+
+Hello, world. Usually, developers spent a lot of time installing dependencies, creating folders, etc, before having our initial configuration and start working on the application.
+
+The goal of ReexJs CLI is that we can start working on our application without worrying about the initial configuration.
+
+With [ReexJs](https://github.com/a12989x/reexjs-cli/) we can:
+
+-   Create a [react.js](https://reactjs.org/) or [next.js](https://nextjs.org/) app.
+-   Create folders with a list of predefined lists and add custom folders.
+-   Create routes if your choose react or pages for next.
+-   Install normal dependencies and dev dependencies.
+
+## Requirements
+
+-   [Node Js](https://nodejs.org/)
+-   An active internet connection for CLI to work.
+
+## How it works
+
+ReexJs use `npx create-react-app <appname>` or `npx create-next-app <appname>` and `spawn` from `child_process` to run one of the two commands.
+
+To create the folders use `mkdirSync` from `fs`, and depending on if you previously choose react.js or next.js folders will be created in different paths, for react.js these will be created in `src/`, and for next.js folder will be created in the root path `/`.
+
+Finally to install the dependencies `spawn` is also used when installing the framework. `npm i <dependencies>` for normal dependencies and `npm i -D <devDependencies>`.
+
+## How to use it
+
+1. Install [ReexJs](https://github.com/a12989x/reexjs-cli/)
+    - [Npm](https://www.npmjs.com/): `npx reexjs-cli`
+    - [Yarn](https://yarnpkg.com/): `yarn reexjs-cli`
+2. Choose the app name. By default is _reexjs-app._
+3. Choose the framework between react.js and next.js.
+4. Select predefined folders and add custom folders.
+5. Write your normal dependencies and dev dependencies.
+6. Finally change the directory and run `npm start` or `npm run dev`.
+
+<Image
+	src='https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2cknqqh4l4bbkwvc0nxs.gif'
+	alt='intro'
+	height='450'
+	width='800'
+/>
+
+## Conclusion
+
+ReexJs can save us time and start working on our application without worrying about the initial configuration.
+
+So take a ☕ and relax.
+
+<hr />
+
+Thank you for reading 🙏
+
+If you enjoyed this article or found it helpful, give it
+a thumbs-up 👍, and if you have an idea to improve the application or any type of
+suggestion please leave it below in the comments 💬.
+
+Feel free to connect 👋
+
+<p>
+	<Link
+		href='https://www.buymeacoffee.com/codax'
+		target='_blank'
+		display='inline-block'
+	>
+		<Image
+			src='https://cdn.buymeacoffee.com/buttons/v2/default-violet.png'
+			alt='Buy Me A Coffee'
+			height='70'
+			width='250'
+		/>
+	</Link>
+</p>

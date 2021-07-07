@@ -1,0 +1,104 @@
+---
+title: How to center elements with CSS
+publishedAt: Jan 28, 2021
+summary: Knowing how to center things with css is very necessary for our day to day as web developers. There are several ways to achieve the same, so it can get us confused. Today we are going to learn how to center things horizontally, vertically and both (horizontally and vertically) fully responsive.
+image: https://res.cloudinary.com/codax/image/upload/v1625607992/blog/3/cover.png
+imageBlur: https://res.cloudinary.com/codax/image/upload/v1625608501/blog/3/cover_blur.jpg
+---
+
+Knowing how to center things with css is very necessary for our day to day as web developers. There are several ways to achieve the same, so it can get us confused. Today we are going to learn how to center things horizontally, vertically and both (horizontally and vertically) fully responsive.
+
+We will work with two divs, one as a parent element and the other as a child.
+
+```html:index.html
+<div class="parent">
+	<div class="child"></div>
+</div>
+```
+
+### 1. Horizontally
+
+Center an element `display: block;` requires a fixed width, since it takes all the available width or, failing that, transform it to `display: inline-block;`
+
+<Image
+	src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/Center_horizontally_CSS.jpg'
+	alt='center horizontally'
+	height='293'
+	width='880'
+/>
+
+**Method margin-auto:** Giving it automatic margin from left to right, it automatically
+centers the element horizontally and is fully responsive.
+
+```css
+.child {
+	margin: 0 auto;
+}
+```
+
+**Using Flexbox:**
+Flexbox is a more useful feature within css. We use it a lot for the layout. We can use `justify-content` in the parent element to achieve our goal. And it is also responsive. (Remember that by default `flex-direction` is `row` so all child elements will be placed in a horizontal row, if you want them to be placed vertically use `flex-direction: column;`)
+
+```css
+.parent {
+	display: flex;
+	justify-content: center;
+}
+```
+
+### 2. Vertically
+
+Centering items vertically is confusing, so let's see how to get it right.
+
+<Image
+	src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/Center_vertically_CSS.jpg'
+	alt='center vertically'
+	height='293'
+	width='880'
+/>
+
+**Using Flexbox(again):** Now instead of using `justify-content` we will use `align-items`.
+
+```css
+.parent {
+	display: flex;
+	align-items: center;
+}
+```
+
+### 3. Both(horizontally and vertically)
+
+Centering elements both horizontally and vertically is very satisfying. We almost always have a situation where we want to center things so let's see 2 ways to do it.
+
+<Image
+	src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/center_both_css.jpg'
+	alt='center both'
+	height='293'
+	width='880'
+/>
+
+**With Flexbox(yes again):** As we've seen, flexbox helps us to center things both
+horizontally and vertically, so what if we put `justify-content` and `align-items`
+together?
+
+```css
+.parent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+```
+
+**Using Grid:**
+This is the last method of the post and the fastest. It is my favorite, we can center the elements with only 2 lines of code!
+
+```css
+.parent {
+	display: grid;
+	place-items: center;
+}
+```
+
+### Conclusion
+
+There are many ways to achieve the same, such as using `position`, playing with `padding` and `margin`. Although it generally depends on the situation which method we will use. I recommend learning Flexbox and Grid as it helps us in various ways, reducing our lines of code. Share this post to whoever you think will help.
