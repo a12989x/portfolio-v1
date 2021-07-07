@@ -20,6 +20,7 @@ const ImageComponent = ({
 			height={height}
 			width={width}
 			layout='responsive'
+			className='post-images'
 		/>
 	);
 };

@@ -94,8 +94,8 @@ const MDXComponents = {
 			as='p'
 			mx='auto'
 			maxW='container.sm'
-			mb={4}
-			lineHeight={5}
+			mb={6}
+			lineHeight={6}
 			{...props}
 		/>
 	),
