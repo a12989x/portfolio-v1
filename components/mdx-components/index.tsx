@@ -18,6 +18,7 @@ import {
 import LinkInterface from '@/interfaces/Link';
 
 import Link from '../Link';
+import Image from './Image';
 
 const MDXComponents = {
 	h1: (props: HeadingProps): JSX.Element => (
@@ -100,10 +101,10 @@ const MDXComponents = {
 	),
 	inlineCode: (props: CodeProps): JSX.Element => <Code {...props} />,
 	ul: (props: ListProps): JSX.Element => (
-		<UnorderedList my={4} mx='auto' maxW='580px' {...props} />
+		<UnorderedList mb={4} pl={4} mx='auto' maxW='580px' {...props} />
 	),
 	ol: (props: ListProps): JSX.Element => (
-		<OrderedList my={4} mx='auto' maxW='580px' {...props} />
+		<OrderedList mb={4} pl={4} mx='auto' maxW='580px' {...props} />
 	),
 	li: (props: ListItemProps): JSX.Element => (
 		<ListItem mx='auto' maxW='container.sm' {...props} />
@@ -115,6 +116,7 @@ const MDXComponents = {
 	OrderedList,
 	UnorderedList,
 	ListItem,
+	Image,
 };
 
 export default MDXComponents;
