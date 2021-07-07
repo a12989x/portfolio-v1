@@ -36,8 +36,6 @@ const contact = async (
 
 		const response = await fetch(url, options);
 
-		console.log(response, '\n', 'JSON', await response.json());
-
 		if (response.status >= 400) {
 			const text = await response.text();
 			return res.status(400).json({
