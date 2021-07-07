@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { Box, Heading } from '@chakra-ui/react';
 import { ParsedUrlQuery } from 'querystring';
@@ -7,6 +8,7 @@ import { getPostBySlug, getPosts } from '@/utils/mdx';
 
 import MDXComponents from '@/components/mdx-components';
 import PostDataInterface from '@/interfaces/PostDataInterface';
+import Information from '@/components/pages/blog/Information';
 
 interface IParams extends ParsedUrlQuery {
 	slug: string;
@@ -32,6 +34,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const Blog = ({ mdxSource, frontMatter }: PostDataInterface): JSX.Element => {
 	return (
 		<Box as='main' mx='auto' maxW='800px' w='100%'>
+			<Image
+				className='post-images'
+				src={frontMatter.image}
+				alt='cover'
+				height={420}
+				width={1000}
+				blurDataURL={frontMatter.imageBlur}
+				placeholder='blur'
+				priority
+			/>
+
 			<Heading
 				as='h1'
 				size='2xl'
@@ -42,6 +55,11 @@ const Blog = ({ mdxSource, frontMatter }: PostDataInterface): JSX.Element => {
 			>
 				{frontMatter.title}
 			</Heading>
+
+			<Information
+				publishedAt={frontMatter.publishedAt}
+				readingTime={frontMatter.readingTime}
+			/>
 
 			<Box as='section'>
 				<MDXRemote {...mdxSource} components={MDXComponents} />
