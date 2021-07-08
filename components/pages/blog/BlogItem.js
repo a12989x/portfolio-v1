@@ -1,8 +1,9 @@
 import Link from '@/components/Link';
 import useColorModeValues from '@/utils/hooks/useColorModeValues';
-import { Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { Grid, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { format } from 'date-fns';
 
-const BlogItem = ({ title, summary, slug }) => {
+const BlogItem = ({ title, summary, slug, publishedAt }) => {
 	const textColor = useColorModeValue('neutral.800', 'neutral.200');
 	const { blackColor } = useColorModeValues();
 
@@ -14,9 +15,16 @@ const BlogItem = ({ title, summary, slug }) => {
 			color={blackColor}
 			_hover={{ color: 'primary.500', textDecoration: 'none' }}
 		>
-			<Heading as='h4' size='md' mb={2}>
-				{title}
-			</Heading>
+			<Grid
+				gridTemplate={{ base: '1fr auto / 1fr', md: '1fr / 1fr auto' }}
+				columnGap={2}
+			>
+				<Heading as='h4' size='md' mb={2}>
+					{title}
+				</Heading>
+
+				<Text>{format(publishedAt, 'MMM DD, YYYY')}</Text>
+			</Grid>
 			<Text color={textColor}>{summary}</Text>
 		</Link>
 	);
