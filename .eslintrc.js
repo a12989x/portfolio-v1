@@ -4,12 +4,12 @@ module.exports = {
 		es2021: true,
 	},
 	extends: [
+		'next',
+		'next/core-web-vitals',
 		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
 		'google',
 		'prettier',
 	],
-	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -17,13 +17,10 @@ module.exports = {
 		ecmaVersion: 2018,
 		sourceType: 'module',
 	},
-	plugins: ['react'],
 	rules: {
 		'react/react-in-jsx-scope': 0,
-		'react/jsx-filename-extension': [
-			1,
-			{ extensions: ['js', 'jsx', 'ts', 'tsx'] },
-		],
+		'react/jsx-filename-extension': [1, { extensions: ['js', 'jsx'] }],
+		'react/prop-types': 0,
 	},
 	settings: { react: { version: 'latest' } },
 };
