@@ -15,6 +15,9 @@ const styles = {
 		pre: {
 			p: 4,
 			mb: 4,
+			w: '100%',
+			maxW: { base: 'calc(100vw - 2rem)', sm: 'calc(100vw - 4rem)' },
+			overflowX: 'auto',
 			fontSize: '.875rem',
 			lineHeight: '1.7142857',
 			bg: colorMode === 'light' ? 'neutral.100' : 'neutral.800',
