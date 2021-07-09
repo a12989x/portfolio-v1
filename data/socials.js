@@ -3,7 +3,7 @@ import TwitterIcon from '@/styles/theme/icons/twitter';
 
 export const github = {
 	icon: GitHubIcon,
-	href: 'https://github.com/gregogun',
+	href: 'https://github.com/a12989x/',
 	name: 'github',
 	color: 'currentColor',
 };
