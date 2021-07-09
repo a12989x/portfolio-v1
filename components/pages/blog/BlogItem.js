@@ -18,8 +18,9 @@ const BlogItem = ({ title, summary, slug, publishedAt }) => {
 			<Grid
 				gridTemplate={{ base: '1fr auto / 1fr', md: '1fr / 1fr auto' }}
 				columnGap={2}
+				mb={2}
 			>
-				<Heading as='h4' size='md' mb={2}>
+				<Heading as='h4' size='md'>
 					{title}
 				</Heading>
 
