@@ -1,14 +1,14 @@
 import Image from 'next/image';
 
-const ImageComponent = ({ src, alt, height, width }) => {
+const ImageComponent = ({ src, alt, height, width, blurDataURL, ...props }) => {
 	return (
 		<Image
-			src={src}
-			alt={alt}
+			className='post-images'
+			layout='responsive'
 			height={height}
 			width={width}
-			layout='responsive'
-			className='post-images'
+			alt={alt}
+			src={src}
 		/>
 	);
 };
