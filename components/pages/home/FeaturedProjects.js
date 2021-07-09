@@ -1,7 +1,8 @@
-import NextLink from 'next/link';
 import { Heading, VStack } from '@chakra-ui/layout';
 import { Button } from '@chakra-ui/button';
+
 import Projects from '../../Projects';
+import Link from '@/components/Link';
 
 const FeaturedProjects = () => {
 	return (
@@ -12,11 +13,9 @@ const FeaturedProjects = () => {
 
 			<Projects featured />
 
-			<NextLink href='/projects' passHref>
-				<Button as='a' variant='primary'>
-					See all projects
-				</Button>
-			</NextLink>
+			<Link href='/projects'>
+				<Button variant='primary'>See all projects</Button>
+			</Link>
 		</VStack>
 	);
 };

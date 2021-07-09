@@ -1,5 +1,6 @@
 import { Button } from '@chakra-ui/button';
 import { Box, Center, Grid, Heading, Text } from '@chakra-ui/layout';
+import Link from '@/components/Link';
 
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { useColorModeValue } from '@chakra-ui/color-mode';
@@ -52,16 +53,11 @@ const Hero = () => {
 						Feel free to have a look around, and learn more about
 						myself and what I like to work on.
 					</Text>
-					<Button
-						as='a'
-						href='mailto:gregogun97@gmail.com'
-						target='_blank'
-						rel='noopener noreferrer'
-						size='lg'
-						variant='primary'
-					>
-						Get In Touch
-					</Button>
+					<Link href='/about#contact'>
+						<Button size='lg' variant='primary'>
+							Get In Touch
+						</Button>
+					</Link>
 				</Box>
 				{isExtraLarge && <Icon as={HeroIcon} boxSize='100%' />}
 			</Grid>

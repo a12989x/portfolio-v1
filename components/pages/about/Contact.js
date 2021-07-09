@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 const Contact = () => {
 	return (
-		<Box p={{ base: '1rem', md: 0 }} w='100%' as='section'>
+		<Box p={{ base: '1rem', md: 0 }} w='100%' as='section' id='contact'>
 			<SectionHeading>Get in touch</SectionHeading>
 			<SimpleGrid
 				mx='auto'

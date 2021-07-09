@@ -12,6 +12,7 @@ import { Button } from '@chakra-ui/button';
 import Icon from '@chakra-ui/icon';
 
 import useColorModeValues from '@/utils/hooks/useColorModeValues';
+import Link from './Link';
 
 const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
 	const { blackColor, whiteColor, greyColor } = useColorModeValues();
@@ -61,13 +62,13 @@ const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
 
 				<HStack>
 					{live && (
-						<Button as='a' href={live} variant='primaryOutline'>
-							Visit Site
-						</Button>
+						<Link href={live} isExternal>
+							<Button variant='primaryOutline'>Visit Site</Button>
+						</Link>
 					)}
-					<Button as='a' href={repo} variant='outline'>
-						View Code
-					</Button>
+					<Link href={repo} isExternal>
+						<Button variant='outline'>View Code</Button>
+					</Link>
 				</HStack>
 			</Grid>
 		</Box>
