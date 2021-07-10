@@ -6,6 +6,7 @@ import { getPostBySlug, getPosts } from '@/utils/mdx';
 
 import MDXComponents from '@/components/mdx-components';
 import Information from '@/components/pages/blog/Information';
+import Seo from '@/components/Seo';
 
 export const getStaticPaths = async () => {
 	const posts = await getPosts();
@@ -19,12 +20,14 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug } }) => {
 	const { mdxSource, frontMatter } = await getPostBySlug(slug);
 
-	return { props: { mdxSource, frontMatter } };
+	return { props: { mdxSource, frontMatter, slug } };
 };
 
-const Blog = ({ mdxSource, frontMatter }) => {
+const Blog = ({ mdxSource, frontMatter, slug }) => {
 	return (
 		<Box as='main' mx='auto' maxW='800px' w='100%'>
+			<Seo name={frontMatter.title} path={`/${slug}`} />
+
 			<Image
 				className='cover-image'
 				src={frontMatter.image}
