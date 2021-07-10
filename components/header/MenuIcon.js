@@ -1,14 +1,14 @@
-import useColorModeValues from '@/utils/hooks/useColorModeValues';
+import useColorModeValues from '@/hooks/useColorModeValues';
 import { Box } from '@chakra-ui/layout';
 
 const MenuIcon = ({ isOpen }) => {
-	const { blackColor } = useColorModeValues();
+	const { inverseColor } = useColorModeValues();
 
 	return (
 		<Box w='100%' h='100%' position='relative'>
 			<Line
 				left={isOpen ? '8px' : '4px'}
-				bg={blackColor}
+				bg={inverseColor}
 				top={isOpen ? '22px' : '16px'}
 				transform={isOpen ? 'rotate(45deg)' : 'none'}
 				width={isOpen ? '32px' : '40px'}
@@ -16,7 +16,7 @@ const MenuIcon = ({ isOpen }) => {
 			<Line
 				right={isOpen ? '8px' : '4px'}
 				transform={isOpen ? 'rotate(-45deg)' : 'none'}
-				bg={blackColor}
+				bg={inverseColor}
 				bottom={isOpen ? '22px' : '16px'}
 				width={isOpen ? '32px' : '16px'}
 			/>

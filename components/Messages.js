@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons';
 import { HStack, Text } from '@chakra-ui/layout';
 
-import useColorModeValues from '@/utils/hooks/useColorModeValues';
+import useColorModeValues from '@/hooks/useColorModeValues';
 
 const SuccessMessage = ({ children, ...props }) => {
 	const { successColor } = useColorModeValues();

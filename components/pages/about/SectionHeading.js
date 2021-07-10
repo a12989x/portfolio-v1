@@ -1,6 +1,6 @@
 import { Box, Heading, HStack } from '@chakra-ui/layout';
 
-import useColorModeValues from '@/utils/hooks/useColorModeValues';
+import useColorModeValues from '@/hooks/useColorModeValues';
 
 const SectionHeading = ({ children }) => {
 	const { greyColor } = useColorModeValues();

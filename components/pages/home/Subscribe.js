@@ -5,7 +5,7 @@ import { Input, InputGroup, InputRightElement } from '@chakra-ui/input';
 import { Box, Heading, Text } from '@chakra-ui/layout';
 import VisuallyHidden from '@chakra-ui/visually-hidden';
 
-import useColorModeValues from '@/utils/hooks/useColorModeValues';
+import useColorModeValues from '@/hooks/useColorModeValues';
 import { ErrorMessage, SuccessMessage } from '@/components/Messages';
 
 const Subscribe = () => {

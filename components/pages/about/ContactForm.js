@@ -4,7 +4,7 @@ import { FormControl, FormLabel } from '@chakra-ui/form-control';
 import { Input } from '@chakra-ui/input';
 import { Textarea } from '@chakra-ui/textarea';
 
-import { useForm } from '@/utils/hooks/useForm';
+import { useForm } from '@/hooks/useForm';
 
 import { ErrorMessage, SuccessMessage } from '@/components/Messages';
 

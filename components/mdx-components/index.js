@@ -84,6 +84,7 @@ const MDXComponents = {
 			as='p'
 			mx='auto'
 			maxW='container.sm'
+			mt={4}
 			mb={6}
 			lineHeight={6}
 			{...props}
@@ -97,9 +98,7 @@ const MDXComponents = {
 		<OrderedList mb={4} pl={4} mx='auto' maxW='580px' {...props} />
 	),
 	li: (props) => <ListItem mx='auto' maxW='container.sm' {...props} />,
-	hr: (props) => (
-		<Divider borderColor='neutral.200' mt={14} mb={10} {...props} />
-	),
+	hr: (props) => <Divider mt={14} mb={10} {...props} />,
 	Link,
 	OrderedList,
 	UnorderedList,

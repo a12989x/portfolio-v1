@@ -1,18 +1,17 @@
 import Link from '@/components/Link';
-import useColorModeValues from '@/utils/hooks/useColorModeValues';
-import { Grid, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import useColorModeValues from '@/hooks/useColorModeValues';
+import { Grid, Heading, Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
 
 const BlogItem = ({ title, summary, slug, publishedAt }) => {
-	const textColor = useColorModeValue('neutral.800', 'neutral.200');
-	const { blackColor } = useColorModeValues();
+	const { inverseColor } = useColorModeValues();
 
 	return (
 		<Link
 			href={`/blog/${slug}`}
 			mb={8}
 			display='inline-block'
-			color={blackColor}
+			color={inverseColor}
 			_hover={{ color: 'primary.500', textDecoration: 'none' }}
 		>
 			<Grid
@@ -24,9 +23,11 @@ const BlogItem = ({ title, summary, slug, publishedAt }) => {
 					{title}
 				</Heading>
 
-				<Text>{format(publishedAt, 'MMM DD, YYYY')}</Text>
+				<Text color='neutral.400'>
+					{format(publishedAt, 'MMM DD, YYYY')}
+				</Text>
 			</Grid>
-			<Text color={textColor}>{summary}</Text>
+			<Text>{summary}</Text>
 		</Link>
 	);
 };

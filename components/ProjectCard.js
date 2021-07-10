@@ -11,11 +11,11 @@ import {
 import { Button } from '@chakra-ui/button';
 import Icon from '@chakra-ui/icon';
 
-import useColorModeValues from '@/utils/hooks/useColorModeValues';
+import useColorModeValues from '@/hooks/useColorModeValues';
 import Link from './Link';
 
 const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
-	const { blackColor, whiteColor, greyColor } = useColorModeValues();
+	const { inverseColor, bgColor, greyColor } = useColorModeValues();
 
 	return (
 		<Box
@@ -26,12 +26,12 @@ const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
 			border='1px solid'
 			borderColor={greyColor}
 		>
-			<Center borderRadius={0} fill={whiteColor} h='8rem' bg={blackColor}>
+			<Center borderRadius={0} fill={bgColor} h='8rem' bg={inverseColor}>
 				<Icon
 					aria-label='logo'
 					boxSize={12}
 					as={logo}
-					color={whiteColor}
+					color={bgColor}
 				/>
 			</Center>
 

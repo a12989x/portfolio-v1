@@ -20,7 +20,7 @@ const MobileNav = ({ toggleMenu }) => {
 				</NavItem>
 			</VStack>
 
-			<Divider borderColor='neutral.200' width='50vw' />
+			<Divider width='50vw' />
 
 			<VStack as='ul' p={4} my={8} spacing={8} align='flex-end'>
 				<NavItem

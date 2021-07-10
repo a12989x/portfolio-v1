@@ -2,15 +2,15 @@ import { Button } from '@chakra-ui/button';
 import { Box, Center, Grid, Heading, Text } from '@chakra-ui/layout';
 import Link from '@/components/Link';
 
-import { useMediaQuery } from '@chakra-ui/media-query';
 import { useColorModeValue } from '@chakra-ui/color-mode';
+import useMediaQueries from '@/hooks/useMediaQueries';
 
 import { HeroIcon } from '@/styles/theme/icons';
 import Icon from '@chakra-ui/icon';
 
 const Hero = () => {
-	const color = useColorModeValue('neutral.600', 'neutral.100');
-	const [isExtraLarge] = useMediaQuery('(min-width: 1200px)');
+	const textColor = useColorModeValue('neutral.600', 'neutral.100');
+	const { isExtraLargeSize } = useMediaQueries();
 
 	return (
 		<Center
@@ -34,7 +34,7 @@ const Hero = () => {
 						mb={{ base: 16, lg: 24 }}
 						maxW='600px'
 						fontSize={24}
-						color={color}
+						color={textColor}
 					>
 						Welcome to my corner of the internet, where you can find
 						my works, thoughts, favorite coffee and other random
@@ -59,7 +59,7 @@ const Hero = () => {
 						</Button>
 					</Link>
 				</Box>
-				{isExtraLarge && <Icon as={HeroIcon} boxSize='100%' />}
+				{isExtraLargeSize && <Icon as={HeroIcon} boxSize='100%' />}
 			</Grid>
 		</Center>
 	);
