@@ -12,6 +12,7 @@ import colors from './foundations/colors';
 
 // Component style overrides
 import Button from './components/button';
+import Divider from './components/divider';
 import Link from './components/link';
 import Text from './components/text';
 
@@ -20,7 +21,7 @@ const overrides = {
 	styles,
 	fonts,
 	colors,
-	components: { Button, Link, Text },
+	components: { Button, Divider, Link, Text },
 };
 
 const theme = extendTheme(overrides);
