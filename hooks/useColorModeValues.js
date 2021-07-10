@@ -1,10 +1,8 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const useColorModeValues = () => {
-	const whiteColor = useColorModeValue('default.light', 'default.dark');
-
-	const blackColor = useColorModeValue('default.dark', 'default.light');
-
+	const inverseColor = useColorModeValue('default.dark', 'default.light');
+	const bgColor = useColorModeValue('default.light', 'default.dark');
 	const greyColor = useColorModeValue('neutral.200', 'neutral.600');
 
 	const successColor = useColorModeValue(
@@ -17,9 +15,11 @@ const useColorModeValues = () => {
 		'accent.errorLight'
 	);
 
+	/* ────────────────────────────────────────────────────── */
+
 	return {
-		whiteColor,
-		blackColor,
+		inverseColor,
+		bgColor,
 		greyColor,
 		successColor,
 		errorColor,
