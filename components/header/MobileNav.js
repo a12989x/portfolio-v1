@@ -23,12 +23,8 @@ const MobileNav = ({ toggleMenu }) => {
 			<Divider width='50vw' />
 
 			<VStack as='ul' p={4} my={8} spacing={8} align='flex-end'>
-				<NavItem
-					href='/newsletter'
-					variant='large'
-					onClick={toggleMenu}
-				>
-					Newsletter
+				<NavItem href='/snippets' variant='large' onClick={toggleMenu}>
+					Snippets
 				</NavItem>
 				<NavItem href='/community' variant='large' onClick={toggleMenu}>
 					Community
