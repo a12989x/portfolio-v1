@@ -59,6 +59,28 @@ const styles = {
 		'.remark-code-title + pre': { borderTopRadius: 'none' },
 		'.cover-image': { borderRadius: 'sm' },
 		'.post-images': { borderRadius: 'sm', mb: '2rem !important' },
+		'.mdx-marker': {
+			px: '2px',
+			mx: '-1rem',
+			display: 'block',
+			bg: colorMode === 'light' ? 'neutral.150' : 'neutral.700',
+			borderLeft: '3px solid',
+			borderColor: 'primary.500',
+		},
+		'.anchor': {
+			position: 'absolute',
+			pr: '0.5rem',
+			ml: '-1rem',
+			w: '80%',
+			textDecoration: 'none !important',
+			transform: 'translateX(-2.5rem)',
+			opacity: 0,
+		},
+		'.anchor:after': {
+			content: '"#"',
+			color: colorMode === 'light' ? 'neutral.200' : 'neutral.700',
+		},
+		'.anchor:hover': { opacity: 1 },
 	}),
 };
 
