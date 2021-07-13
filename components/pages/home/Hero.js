@@ -1,12 +1,16 @@
+import { Box } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/button';
-import { Box, Center, Grid, Heading, Text } from '@chakra-ui/layout';
-import Link from '@/components/Link';
+import { Center, Grid, Heading, Text } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
+import Icon from '@chakra-ui/icon';
 
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import useMediaQueries from '@/hooks/useMediaQueries';
 
 import { HeroIcon } from '@/styles/theme/icons';
-import Icon from '@chakra-ui/icon';
+import Link from '@/components/Link';
+
+const MainBox = motion(Box);
 
 const Hero = () => {
 	const textColor = useColorModeValue('neutral.600', 'neutral.100');
@@ -25,7 +29,12 @@ const Hero = () => {
 				templateRows='auto'
 				gap={8}
 			>
-				<Box as='main' maxW='650px'>
+				<MainBox
+					as='main'
+					maxW='650px'
+					initial={{ y: 50, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+				>
 					<Heading as='h1' mb={2} size='2xl'>
 						Hi, I’m Alexis Guzman.
 					</Heading>
@@ -58,8 +67,15 @@ const Hero = () => {
 							Get In Touch
 						</Button>
 					</Link>
-				</Box>
-				{isExtraLargeSize && <Icon as={HeroIcon} boxSize='100%' />}
+				</MainBox>
+				{isExtraLargeSize && (
+					<motion.div
+						initial={{ y: -50, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+					>
+						<Icon as={HeroIcon} boxSize='100%' />
+					</motion.div>
+				)}
 			</Grid>
 		</Center>
 	);

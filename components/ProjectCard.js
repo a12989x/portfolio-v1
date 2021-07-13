@@ -13,6 +13,7 @@ import Icon from '@chakra-ui/icon';
 
 import useColorModeValues from '@/hooks/useColorModeValues';
 import Link from './Link';
+import { motion } from 'framer-motion';
 
 const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
 	const { inverseColor, bgColor, greyColor } = useColorModeValues();
@@ -27,12 +28,18 @@ const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
 			borderColor={greyColor}
 		>
 			<Center borderRadius={0} fill={bgColor} h='8rem' bg={inverseColor}>
-				<Icon
-					aria-label='logo'
-					boxSize={12}
-					as={logo}
-					color={bgColor}
-				/>
+				<motion.div
+					drag
+					whileDrag={{ scale: 0.9 }}
+					dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+				>
+					<Icon
+						aria-label='logo'
+						boxSize={12}
+						as={logo}
+						color={bgColor}
+					/>
+				</motion.div>
 			</Center>
 
 			<Grid

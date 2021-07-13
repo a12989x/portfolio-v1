@@ -1,9 +1,20 @@
 import NextLink from 'next/link';
 import { VStack, Link as ChakraLink, Box } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
+
+const item = { hidden: { x: -50, opacity: 0 }, show: { x: 0, opacity: 1 } };
+
+const VStackBox = motion(VStack);
 
 const NavItem = ({ href, children, variant = 'subtle', ...props }) => {
 	return (
-		<VStack as='li' h='100%' align='start' listStyleType='none'>
+		<VStackBox
+			as='li'
+			h='100%'
+			align='start'
+			listStyleType='none'
+			variants={item}
+		>
 			<NextLink href={href} passHref>
 				<ChakraLink
 					mr={{ base: 0, sm: 4 }}
@@ -58,7 +69,7 @@ const NavItem = ({ href, children, variant = 'subtle', ...props }) => {
 					<Box as='span'>{children}</Box>
 				</ChakraLink>
 			</NextLink>
-		</VStack>
+		</VStackBox>
 	);
 };
 

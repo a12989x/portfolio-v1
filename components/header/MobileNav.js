@@ -1,11 +1,44 @@
 import { Divider, VStack } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
 
 import NavItem from './NavItem';
 
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.1,
+			delay: 0.3,
+		},
+	},
+};
+
+const VStackBox = motion(VStack);
+
 const MobileNav = ({ toggleMenu }) => {
 	return (
-		<VStack as='nav' spacing={4} align='flex-end'>
-			<VStack as='ul' p={4} my={8} spacing={8} align='flex-end'>
+		<VStackBox
+			as='nav'
+			spacing={4}
+			align='flex-end'
+			// initial={{
+			// 	x: 100,
+			// 	opacity: 0,
+			// 	transition: { staggerChildren: 5 },
+			// }}
+			animate={{ x: 0, opacity: 1 }}
+		>
+			<VStackBox
+				as='ul'
+				p={4}
+				my={8}
+				spacing={8}
+				align='flex-end'
+				variants={container}
+				initial='hidden'
+				animate='show'
+			>
 				<NavItem href='/' variant='large' onClick={toggleMenu}>
 					Home
 				</NavItem>
@@ -18,11 +51,9 @@ const MobileNav = ({ toggleMenu }) => {
 				<NavItem href='/blog' variant='large' onClick={toggleMenu}>
 					Blog
 				</NavItem>
-			</VStack>
 
-			<Divider width='50vw' />
+				<Divider width='50vw' />
 
-			<VStack as='ul' p={4} my={8} spacing={8} align='flex-end'>
 				<NavItem href='/snippets' variant='large' onClick={toggleMenu}>
 					Snippets
 				</NavItem>
@@ -32,8 +63,8 @@ const MobileNav = ({ toggleMenu }) => {
 				<NavItem href='/uses' variant='large' onClick={toggleMenu}>
 					Uses
 				</NavItem>
-			</VStack>
-		</VStack>
+			</VStackBox>
+		</VStackBox>
 	);
 };
 

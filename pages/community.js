@@ -1,7 +1,12 @@
 import { Flex, Heading, Text } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
+
+import { pageContainer } from '@/animations/pages';
 
 import Seo from '@/components/Seo';
 import ContainerWrapper from '@/components/ContainerWrapper';
+
+const FlexBox = motion(Flex);
 
 /**
  * Community: Community page will contain information about inspirations behind the design/code solutions of this site, as well as contributors.
@@ -9,7 +14,15 @@ import ContainerWrapper from '@/components/ContainerWrapper';
  */
 const Community = () => {
 	return (
-		<Flex as='main' direction='column' align='center' justify='center'>
+		<FlexBox
+			as='main'
+			direction='column'
+			align='center'
+			justify='center'
+			variants={pageContainer}
+			initial='hidden'
+			animate='show'
+		>
 			<Seo name='Community 🌍' path='/community' />
 
 			<ContainerWrapper>
@@ -22,7 +35,7 @@ const Community = () => {
 					contributors.
 				</Text>
 			</ContainerWrapper>
-		</Flex>
+		</FlexBox>
 	);
 };
 

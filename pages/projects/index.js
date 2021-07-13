@@ -1,7 +1,12 @@
 import { Box, Heading, Text } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
+
+import { pageContainer } from '@/animations/pages';
 
 import Seo from '@/components/Seo';
 import AllProjects from '@/components/Projects';
+
+const BoxBox = motion(Box);
 
 /**
  * Projects: Projects page will contain a list of projects I've made or have worked on.
@@ -9,7 +14,14 @@ import AllProjects from '@/components/Projects';
  */
 const Projects = () => {
 	return (
-		<Box as='main' mx='auto' width='100%'>
+		<BoxBox
+			as='main'
+			mx='auto'
+			width='100%'
+			variants={pageContainer}
+			initial='hidden'
+			animate='show'
+		>
 			<Seo name='Projects 🎲' path='/projects' />
 
 			<Heading
@@ -29,7 +41,7 @@ const Projects = () => {
 			</Text>
 
 			<AllProjects />
-		</Box>
+		</BoxBox>
 	);
 };
 

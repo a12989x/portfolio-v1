@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Box, VStack } from '@chakra-ui/react';
 import { Heading } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
 
+import { pageContainer } from '@/animations/pages';
 import { getPostsFrontMatter } from '@/utils/mdx';
 
 import Seo from '@/components/Seo';
@@ -13,6 +15,8 @@ export const getStaticProps = async () => {
 
 	return { props: { posts } };
 };
+
+const VStackBox = motion(VStack);
 
 /**
  * Blog: Blog page will contain a list of Blog I've written.
@@ -31,7 +35,16 @@ const Blog = ({ posts }) => {
 		);
 
 	return (
-		<VStack as='main' mx='auto' w='100%' maxW='800px' spacing={8}>
+		<VStackBox
+			as='main'
+			mx='auto'
+			w='100%'
+			maxW='800px'
+			spacing={8}
+			variants={pageContainer}
+			initial='hidden'
+			animate='show'
+		>
 			<Seo name='Blog 🖊️' path='/blog' />
 
 			<Heading as='h1' size='2xl' mt={12} mb={20} w='100%'>
@@ -48,7 +61,7 @@ const Blog = ({ posts }) => {
 					<BlogItem key={post.title} {...post} />
 				))}
 			</Box>
-		</VStack>
+		</VStackBox>
 	);
 };
 
