@@ -27,7 +27,7 @@ const BlogItem = ({ title, summary, slug, publishedAt }) => {
 					{format(publishedAt, 'MMM DD, YYYY')}
 				</Text>
 			</Grid>
-			<Text>{summary}</Text>
+			<Text noOfLines={3}>{summary}</Text>
 		</Link>
 	);
 };
