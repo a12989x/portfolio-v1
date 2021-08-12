@@ -15,7 +15,7 @@ import useColorModeValues from '@/hooks/useColorModeValues';
 import Link from './Link';
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
+const ProjectCard = ({ logo, title, description, tools, live, site, repo }) => {
 	const { inverseColor, bgColor, greyColor } = useColorModeValues();
 
 	return (
@@ -68,9 +68,16 @@ const ProjectCard = ({ logo, title, description, tools, live, repo }) => {
 				</List>
 
 				<HStack>
+					{site && (
+						<Link href={site} isExternal>
+							<Button variant='primaryOutline'>Visit Site</Button>
+						</Link>
+					)}
 					{live && (
 						<Link href={live} isExternal>
-							<Button variant='primaryOutline'>Visit Site</Button>
+							<Button variant='primaryOutline'>
+								Live Preview
+							</Button>
 						</Link>
 					)}
 					<Link href={repo} isExternal>
