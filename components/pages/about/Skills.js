@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading';
 import SkillItem from './SkillItem';
 
 const Skills = () => {
-	const skills = Object.values(tools).slice(0, 12);
+	const skills = Object.values(tools);
 
 	return (
 		<Box w='100%' as='section'>
