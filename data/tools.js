@@ -14,6 +14,7 @@ import {
 	SassIcon,
 	AlanAiIcon,
 	TypescriptIcon,
+	MDXIcon,
 } from '@/styles/theme/icons';
 
 export const html5 = {
@@ -97,6 +98,13 @@ export const sass = {
 	name: 'Sass',
 	icon: SassIcon,
 	color: '#CC6699',
+	id: uuidv4(),
+};
+
+export const mdx = {
+	name: 'MDX',
+	icon: MDXIcon,
+	color: '#f9ac00',
 	id: uuidv4(),
 };
 
