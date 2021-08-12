@@ -18,6 +18,8 @@ import YouTubeIcon from './youtube';
 import AlanAiIcon from './alanai';
 import NewspaperIcon from './newspaper';
 import TypescriptIcon from './typescript';
+import LitreekIcon from './litreek';
+import MDXIcon from './mdx';
 
 export {
 	LogoIcon,
@@ -40,4 +42,6 @@ export {
 	AlanAiIcon,
 	NewspaperIcon,
 	TypescriptIcon,
+	LitreekIcon,
+	MDXIcon,
 };
