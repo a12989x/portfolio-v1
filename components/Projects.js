@@ -20,20 +20,9 @@ const Projects = ({ featured = false }) => {
 			}}
 			gap={8}
 		>
-			{projectsArray.map(
-				({ logo, title, tools, description, live, repo, id }) => (
-					<ProjectCard
-						// data-testid='project-card'
-						logo={logo}
-						title={title}
-						tools={tools}
-						live={live}
-						description={description}
-						repo={repo}
-						key={id}
-					/>
-				)
-			)}
+			{projectsArray.map((projectItem) => (
+				<ProjectCard key={projectItem.id} {...projectItem} />
+			))}
 		</Grid>
 	);
 };
