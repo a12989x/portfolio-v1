@@ -20,6 +20,12 @@ import {
 	LogoIcon,
 	NewspaperIcon,
 	LitreekIcon,
+	JavascriptIcon,
+	ReactIcon,
+	FirebaseIcon,
+	AlanAiIcon,
+	MDXIcon,
+	HtmlIcon,
 } from '@/styles/theme/icons';
 
 const projects = [
@@ -35,7 +41,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: LitreekIcon,
+		logo: MDXIcon,
 		title: 'NextJS MDX Blog Kit',
 		description:
 			'Blog kit for developers 👨‍💻 built with Next JS, SEO optimized, light 🪶, and easy to customize 👌.',
@@ -68,9 +74,10 @@ const projects = [
 		feature: true,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: AlanAiIcon,
 		title: 'Voice Control News',
-		description: 'Website as a portfolio with a blog.',
+		description:
+			'News website 🌐 with voice control 🎙️ built with react js ⚛️.',
 		tools: [react, alanai, sass],
 		live: 'https://voice-control-react-news-app.vercel.app/',
 		repo: 'https://github.com/a12989x/voice-control-react-news-app/',
@@ -78,7 +85,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: FirebaseIcon,
 		title: 'Superchat',
 		description:
 			'Simple real-time chat app built with React JS ⚛️ and Firebase 🔥.',
@@ -89,7 +96,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: ReactIcon,
 		title: 'Weather PWA',
 		description:
 			'Weather Progressive Web App built with React JS ⚛️ and SASS.',
@@ -100,7 +107,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: ReactIcon,
 		title: 'Wildfire Tracker',
 		description:
 			'Wildfire Tracker 🔥 app built with React JS ⚛️ and Google Maps 🗺️.',
@@ -111,7 +118,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: ReactIcon,
 		title: 'Coronavirus 19 Tracker',
 		description:
 			'Coronavirus 19 tracker app built with React JS ⚛️ and Firebase 🔥.',
@@ -122,7 +129,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: JavascriptIcon,
 		title: 'Neumorphism Calculator',
 		description:
 			'Simple calculator neumorphism design with pure JavaScript add SASS.',
@@ -133,7 +140,7 @@ const projects = [
 		feature: false,
 	},
 	{
-		logo: NewspaperIcon,
+		logo: HtmlIcon,
 		title: 'Fries Page',
 		description:
 			'Simple responsive website 🌐 for an imaginary fries restaurant 🍟 with only HTML and CSS.',
