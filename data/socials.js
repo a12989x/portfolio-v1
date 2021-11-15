@@ -3,7 +3,7 @@ import TwitterIcon from '@/styles/theme/icons/twitter';
 
 export const github = {
 	icon: GitHubIcon,
-	href: 'https://github.com/a12989x/',
+	href: 'https://github.com/codingcodax/',
 	name: 'github',
 	color: 'currentColor',
 };
@@ -17,7 +17,7 @@ export const linkedin = {
 
 export const twitter = {
 	icon: TwitterIcon,
-	href: 'https://twitter.com/__codax__',
+	href: 'https://twitter.com/codingcodax',
 	name: 'twitter',
 	color: '#1DA1F2',
 };
