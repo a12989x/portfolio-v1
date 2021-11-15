@@ -9,12 +9,12 @@ Live preview:
 - Preview Environment: [codaxx.ml/](https://codaxx.ml)
 - Production Environment: [codaxx-prod.vercel.app/](https://codaxx.ml)
 
-This project is bootstrapped with [`reexjs-cli`](https://a12989x.github.io/reexjs-cli/).
+This project is bootstrapped with [`reexjs-cli`](https://codingcodax.github.io/reexjs-cli/).
 
 ## Running the project locally
 
 - Clone the project locally:
-  - `git clone https://github.com/a12989x/portfolio-v1/`
+  - `git clone https://github.com/codingcodax/portfolio-v1/`
 - Install the dependencies.
   - `npm install` or `npm i` or `yarn`
 - Run the development server:
