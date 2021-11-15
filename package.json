@@ -10,10 +10,7 @@
 		"next-lint": "next lint",
 		"prettier:lint": "prettier --write .",
 		"test-all": "npm run prettier && npm run lint && npm run build",
-		"prepare": "husky install",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook",
-		"chromatic": "npx chromatic CHROMATIC_PROJECT_TOKEN"
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@badrap/bar-of-progress": "^0.1.2",
@@ -25,7 +22,7 @@
 		"framer-motion": "^4.1.17",
 		"gray-matter": "^4.0.3",
 		"mdx-prism": "^0.3.3",
-		"next": "^11.0.0",
+		"next": "^12.0.3",
 		"next-mdx-remote": "^3.0.2",
 		"next-seo": "^4.25.1",
 		"react": "^17.0.2",
@@ -38,15 +35,7 @@
 		"uuid": "^3.4.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.14.3",
-		"@storybook/addon-a11y": "^6.2.9",
-		"@storybook/addon-actions": "^6.2.9",
-		"@storybook/addon-essentials": "^6.1.21",
-		"@storybook/addon-links": "^6.2.9",
-		"@storybook/react": "^6.3.4",
 		"@types/uuid": "^8.3.0",
-		"babel-loader": "^8.2.2",
-		"chromatic": "^5.8.3",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^7.27.0",
 		"eslint-config-google": "^0.14.0",

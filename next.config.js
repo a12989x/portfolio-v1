@@ -1,8 +1,5 @@
-/**
- * @type {import('next/dist/next-server/server/config').NextConfig}
- */
-
 module.exports = {
+	swcMinify: true,
 	images: {
 		domains: ['res.cloudinary.com', 'cdn.buymeacoffee.com'],
 	},
