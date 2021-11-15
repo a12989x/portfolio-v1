@@ -8,35 +8,33 @@ import theme from '@/styles/theme';
  * @return {JSX.Element} The JSX Code for the custom Document component
  */
 class MyDocument extends Document {
-	/**
-	 * getInitialProps: Obtain initial props
-	 * @param {Object} ctx - context
-	 * @return {DocumentInitialProps} initialProps
-	 */
-	static async getInitialProps(ctx) {
-		const initialProps = await Document.getInitialProps(ctx);
+  /**
+   * getInitialProps: Obtain initial props
+   * @param {Object} ctx - context
+   * @return {DocumentInitialProps} initialProps
+   */
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
 
-		return { ...initialProps };
-	}
+    return { ...initialProps };
+  }
 
-	/**
-	 * Document: Custom Document
-	 * @return {JSX.Element} Custom JSX
-	 */
-	render() {
-		return (
-			<Html>
-				<Head lang='en' />
-				<body>
-					<ColorModeScript
-						initialColorMode={theme.config.initialColorMode}
-					/>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+  /**
+   * Document: Custom Document
+   * @return {JSX.Element} Custom JSX
+   */
+  render() {
+    return (
+      <Html>
+        <Head lang='en' />
+        <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
 
 export default MyDocument;

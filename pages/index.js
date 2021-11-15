@@ -9,13 +9,13 @@ import Subscribe from '@/components/pages/home/Subscribe';
  * @return {JSX.Element} The JSX Code for the Home page component
  */
 const Home = () => {
-	return (
-		<Box as='section'>
-			<Hero />
-			<FeaturedProjects />
-			<Subscribe />
-		</Box>
-	);
+  return (
+    <Box as='section'>
+      <Hero />
+      <FeaturedProjects />
+      <Subscribe />
+    </Box>
+  );
 };
 
 export default Home;

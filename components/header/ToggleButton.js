@@ -8,38 +8,36 @@ const MoonIconBox = motion(MoonIcon);
 const SunIconBox = motion(SunIcon);
 
 const ToggleButton = () => {
-	const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
 
-	return (
-		<AnimatePresence exitBeforeEnter>
-			<IconButton
-				borderRadius='sm'
-				onClick={toggleColorMode}
-				aria-label={
-					colorMode === 'light'
-						? 'Toggle dark mode'
-						: 'Toggle light Mode'
-				}
-				icon={
-					colorMode === 'light' ? (
-						<MoonIconBox
-							size={6}
-							initial={{ x: 20, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							exit={{ x: -20, opacity: 0 }}
-						/>
-					) : (
-						<SunIconBox
-							size={6}
-							initial={{ x: 20, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							exit={{ x: -20, opacity: 0 }}
-						/>
-					)
-				}
-			/>
-		</AnimatePresence>
-	);
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <IconButton
+        borderRadius='sm'
+        onClick={toggleColorMode}
+        aria-label={
+          colorMode === 'light' ? 'Toggle dark mode' : 'Toggle light Mode'
+        }
+        icon={
+          colorMode === 'light' ? (
+            <MoonIconBox
+              size={6}
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -20, opacity: 0 }}
+            />
+          ) : (
+            <SunIconBox
+              size={6}
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -20, opacity: 0 }}
+            />
+          )
+        }
+      />
+    </AnimatePresence>
+  );
 };
 
 export default ToggleButton;

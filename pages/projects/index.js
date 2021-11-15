@@ -13,36 +13,29 @@ const BoxBox = motion(Box);
  * @return {JSX.Element} The JSX Code for the Projects page component
  */
 const Projects = () => {
-	return (
-		<BoxBox
-			as='main'
-			mx='auto'
-			width='100%'
-			variants={pageContainer}
-			initial='hidden'
-			animate='show'
-		>
-			<Seo name='Projects 🎲' path='/projects' />
+  return (
+    <BoxBox
+      as='main'
+      mx='auto'
+      width='100%'
+      variants={pageContainer}
+      initial='hidden'
+      animate='show'
+    >
+      <Seo name='Projects 🎲' path='/projects' />
 
-			<Heading
-				as='h1'
-				size='2xl'
-				mt={12}
-				mb={20}
-				mx='auto'
-				maxW='container.sm'
-			>
-				Projects 🎲
-			</Heading>
-			<Text mb={20} mx='auto' maxW='container.sm'>
-				Hey there! Here you will find my preferred projects that I have
-				done throughout my career with different technologies, I hope
-				you have fun seeing each.
-			</Text>
+      <Heading as='h1' size='2xl' mt={12} mb={20} mx='auto' maxW='container.sm'>
+        Projects 🎲
+      </Heading>
+      <Text mb={20} mx='auto' maxW='container.sm'>
+        Hey there! Here you will find my preferred projects that I have done
+        throughout my career with different technologies, I hope you have fun
+        seeing each.
+      </Text>
 
-			<AllProjects />
-		</BoxBox>
-	);
+      <AllProjects />
+    </BoxBox>
+  );
 };
 
 export default Projects;

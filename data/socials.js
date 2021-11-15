@@ -2,29 +2,29 @@ import { GitHubIcon, LinkedinIcon, YouTubeIcon } from '@/styles/theme/icons';
 import TwitterIcon from '@/styles/theme/icons/twitter';
 
 export const github = {
-	icon: GitHubIcon,
-	href: 'https://github.com/codingcodax/',
-	name: 'github',
-	color: 'currentColor',
+  icon: GitHubIcon,
+  href: 'https://github.com/codingcodax/',
+  name: 'github',
+  color: 'currentColor',
 };
 
 export const linkedin = {
-	icon: LinkedinIcon,
-	href: 'https://www.linkedin.com/in/codax/',
-	name: 'linkedin',
-	color: '#0A66C2',
+  icon: LinkedinIcon,
+  href: 'https://www.linkedin.com/in/codax/',
+  name: 'linkedin',
+  color: '#0A66C2',
 };
 
 export const twitter = {
-	icon: TwitterIcon,
-	href: 'https://twitter.com/codingcodax',
-	name: 'twitter',
-	color: '#1DA1F2',
+  icon: TwitterIcon,
+  href: 'https://twitter.com/codingcodax',
+  name: 'twitter',
+  color: '#1DA1F2',
 };
 
 export const youtube = {
-	icon: YouTubeIcon,
-	href: 'https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ',
-	name: 'youtube',
-	color: '#FF0000',
+  icon: YouTubeIcon,
+  href: 'https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ',
+  name: 'youtube',
+  color: '#FF0000',
 };

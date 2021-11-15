@@ -1,13 +1,13 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/components/*": ["components/*"],
-			"@/styles/*": ["styles/*"],
-			"@/utils/*": ["utils/*"],
-			"@/hooks/*": ["hooks/*"],
-			"@/data/*": ["data/*"],
-			"@/animations/*": ["animations/*"]
-		}
-	}
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/data/*": ["data/*"],
+      "@/animations/*": ["animations/*"]
+    }
+  }
 }

@@ -5,19 +5,19 @@ import Socials from './Socials';
 import SubRoutes from './SubRoutes';
 
 const Links = () => {
-	return (
-		<HStack
-			as='section'
-			w='100%'
-			maxW='800px'
-			align='start'
-			justify='space-between'
-		>
-			<MainRoutes />
-			<SubRoutes />
-			<Socials />
-		</HStack>
-	);
+  return (
+    <HStack
+      as='section'
+      w='100%'
+      maxW='800px'
+      align='start'
+      justify='space-between'
+    >
+      <MainRoutes />
+      <SubRoutes />
+      <Socials />
+    </HStack>
+  );
 };
 
 export default Links;

@@ -17,11 +17,11 @@ import Link from './components/link';
 import Text from './components/text';
 
 const overrides = {
-	config,
-	styles,
-	fonts,
-	colors,
-	components: { Button, Divider, Link, Text },
+  config,
+  styles,
+  fonts,
+  colors,
+  components: { Button, Divider, Link, Text },
 };
 
 const theme = extendTheme(overrides);

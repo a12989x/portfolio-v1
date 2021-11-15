@@ -12,28 +12,28 @@ import MenuButton from './MenuButton';
 const HeaderBox = motion(chakra.header);
 
 const Header = ({ isMenuOpen, toggleMenu }) => {
-	const { isMobileSize } = useMediaQueries();
+  const { isMobileSize } = useMediaQueries();
 
-	return (
-		<HeaderBox
-			as='header'
-			mb={5}
-			display='flex'
-			alignItems='center'
-			justifyContent='space-between'
-			initial={{ y: -100 }}
-			animate={{ y: 0 }}
-			transition={{ delay: 0.1 }}
-		>
-			{isMobileSize && <ToggleButton />}
-			<Icon as={LogoIcon} boxSize={8} />
-			{!isMobileSize ? (
-				<Nav />
-			) : (
-				<MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-			)}
-		</HeaderBox>
-	);
+  return (
+    <HeaderBox
+      as='header'
+      mb={5}
+      display='flex'
+      alignItems='center'
+      justifyContent='space-between'
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.1 }}
+    >
+      {isMobileSize && <ToggleButton />}
+      <Icon as={LogoIcon} boxSize={8} />
+      {!isMobileSize ? (
+        <Nav />
+      ) : (
+        <MenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      )}
+    </HeaderBox>
+  );
 };
 
 export default Header;

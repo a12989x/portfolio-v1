@@ -15,24 +15,24 @@ const VStackBox = motion(VStack);
  * @return {JSX.Element} The JSX Code for the About page component
  */
 const About = () => {
-	return (
-		<VStackBox
-			as='section'
-			mx='auto'
-			w='100%'
-			maxW='800px'
-			spacing={28}
-			variants={pageContainer}
-			initial='hidden'
-			animate='show'
-		>
-			<Seo name='About 👨‍💻' path='/about' />
+  return (
+    <VStackBox
+      as='section'
+      mx='auto'
+      w='100%'
+      maxW='800px'
+      spacing={28}
+      variants={pageContainer}
+      initial='hidden'
+      animate='show'
+    >
+      <Seo name='About 👨‍💻' path='/about' />
 
-			<Intro />
-			<Skills />
-			<Contact />
-		</VStackBox>
-	);
+      <Intro />
+      <Skills />
+      <Contact />
+    </VStackBox>
+  );
 };
 
 export default About;

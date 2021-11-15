@@ -21,12 +21,12 @@ We will work with two divs, one as a parent element and the other as a child.
 Center an element `display: block;` requires a fixed width, since it takes all the available width or, failing that, transform it to `display: inline-block;`
 
 <Image
-	height='293'
-	width='880'
-	alt='center horizontally'
-	src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/Center_horizontally_CSS.jpg'
-	placeholder='blur'
-	blurDataURL='https://res.cloudinary.com/codax/image/upload/v1625845369/blog/1/horizontally_blur.jpg'
+  height='293'
+  width='880'
+  alt='center horizontally'
+  src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/Center_horizontally_CSS.jpg'
+  placeholder='blur'
+  blurDataURL='https://res.cloudinary.com/codax/image/upload/v1625845369/blog/1/horizontally_blur.jpg'
 />
 
 **Method margin-auto:** Giving it automatic margin from left to right, it automatically
@@ -34,7 +34,7 @@ centers the element horizontally and is fully responsive.
 
 ```css
 .child {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 ```
 
@@ -43,8 +43,8 @@ Flexbox is a more useful feature within css. We use it a lot for the layout. We 
 
 ```css
 .parent {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 ```
 
@@ -53,20 +53,20 @@ Flexbox is a more useful feature within css. We use it a lot for the layout. We 
 Centering items vertically is confusing, so let's see how to get it right.
 
 <Image
-	height='293'
-	width='880'
-	alt='center vertically'
-	src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/Center_vertically_CSS.jpg'
-	placeholder='blur'
-	blurDataURL='https://res.cloudinary.com/codax/image/upload/v1625845369/blog/1/vertically_blur.jpg'
+  height='293'
+  width='880'
+  alt='center vertically'
+  src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/Center_vertically_CSS.jpg'
+  placeholder='blur'
+  blurDataURL='https://res.cloudinary.com/codax/image/upload/v1625845369/blog/1/vertically_blur.jpg'
 />
 
 **Using Flexbox(again):** Now instead of using `justify-content` we will use `align-items`.
 
 ```css
 .parent {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 ```
 
@@ -75,12 +75,12 @@ Centering items vertically is confusing, so let's see how to get it right.
 Centering elements both horizontally and vertically is very satisfying. We almost always have a situation where we want to center things so let's see 2 ways to do it.
 
 <Image
-	height='293'
-	width='880'
-	alt='center both'
-	src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/center_both_css.jpg'
-	placeholder='blur'
-	blurDataURL='https://res.cloudinary.com/codax/image/upload/v1625845369/blog/1/both_blur.jpg'
+  height='293'
+  width='880'
+  alt='center both'
+  src='https://res.cloudinary.com/codax/image/upload/v1616080807/blog/1/center_both_css.jpg'
+  placeholder='blur'
+  blurDataURL='https://res.cloudinary.com/codax/image/upload/v1625845369/blog/1/both_blur.jpg'
 />
 
 **With Flexbox(yes again):** As we've seen, flexbox helps us to center things both
@@ -89,9 +89,9 @@ together?
 
 ```css
 .parent {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ```
 
@@ -100,8 +100,8 @@ This is the last method of the post and the fastest. It is my favorite, we can c
 
 ```css
 .parent {
-	display: grid;
-	place-items: center;
+  display: grid;
+  place-items: center;
 }
 ```
 

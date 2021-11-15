@@ -5,19 +5,19 @@ import Projects from '../../Projects';
 import Link from '@/components/Link';
 
 const FeaturedProjects = () => {
-	return (
-		<VStack as='section' w='100%' spacing={16}>
-			<Heading as='h2' textAlign='center'>
-				Featured Projects
-			</Heading>
+  return (
+    <VStack as='section' w='100%' spacing={16}>
+      <Heading as='h2' textAlign='center'>
+        Featured Projects
+      </Heading>
 
-			<Projects featured />
+      <Projects featured />
 
-			<Link href='/projects'>
-				<Button variant='primary'>See all projects</Button>
-			</Link>
-		</VStack>
-	);
+      <Link href='/projects'>
+        <Button variant='primary'>See all projects</Button>
+      </Link>
+    </VStack>
+  );
 };
 
 export default FeaturedProjects;

@@ -13,29 +13,29 @@ const FlexBox = motion(Flex);
  * @return {JSX.Element} The JSX Code for the Uses page component
  */
 const Uses = () => {
-	return (
-		<FlexBox
-			as='main'
-			direction='column'
-			align='center'
-			justify='center'
-			variants={pageContainer}
-			initial='hidden'
-			animate='show'
-		>
-			<Seo name='Uses 🔌' path='/uses' />
+  return (
+    <FlexBox
+      as='main'
+      direction='column'
+      align='center'
+      justify='center'
+      variants={pageContainer}
+      initial='hidden'
+      animate='show'
+    >
+      <Seo name='Uses 🔌' path='/uses' />
 
-			<ContainerWrapper>
-				<Heading as='h1' size='xl'>
-					Uses 🔌
-				</Heading>
-				<Text mb='1rem'>
-					This page will contain information about what software and
-					hardware I currently use day-to-day.
-				</Text>
-			</ContainerWrapper>
-		</FlexBox>
-	);
+      <ContainerWrapper>
+        <Heading as='h1' size='xl'>
+          Uses 🔌
+        </Heading>
+        <Text mb='1rem'>
+          This page will contain information about what software and hardware I
+          currently use day-to-day.
+        </Text>
+      </ContainerWrapper>
+    </FlexBox>
+  );
 };
 
 export default Uses;
