@@ -17,7 +17,7 @@ const ContactText = () => {
 
 			<Text mb={4}>
 				Or if you would prefer to, you can also reach me on{' '}
-				<Link href='https://twitter.com/__codax__' isExternal>
+				<Link href='https://twitter.com/codingcodax' isExternal>
 					twitter
 				</Link>{' '}
 				and{' '}

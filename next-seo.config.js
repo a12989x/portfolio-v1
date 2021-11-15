@@ -22,8 +22,8 @@ const SEO = {
 		],
 	},
 	twitter: {
-		handle: '@__codax__',
-		site: '@__codax__',
+		handle: '@codingcodax',
+		site: '@codingcodax',
 		cardType: 'summary_large_image',
 	},
 };
