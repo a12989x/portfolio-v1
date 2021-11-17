@@ -8,6 +8,7 @@ import { getPostBySlug, getPosts } from '@/utils/mdx';
 
 import MDXComponents from '@/components/mdx-components';
 import Information from '@/components/pages/blog/Information';
+import Minimap from '@/components/pages/blog/Minimap';
 import Seo from '@/components/Seo';
 
 export const getStaticPaths = async () => {
@@ -29,39 +30,42 @@ const BoxBox = motion(Box);
 
 const Blog = ({ mdxSource, frontMatter, slug }) => {
   return (
-    <BoxBox
-      as='main'
-      mx='auto'
-      maxW='800px'
-      w='100%'
-      variants={pageContainer}
-      initial='hidden'
-      animate='show'
-    >
+    <BoxBox as='div' variants={pageContainer} initial='hidden' animate='show'>
       <Seo name={frontMatter.title} path={`/${slug}`} />
 
-      <Image
-        className='cover-image'
-        src={frontMatter.image}
-        alt='cover'
-        height={420}
-        width={1000}
-        blurDataURL={frontMatter.imageBlur}
-        placeholder='blur'
-        priority
-      />
+      <Minimap />
 
-      <Heading as='h1' size='2xl' mt={12} mb={20} mx='auto' maxW='container.sm'>
-        {frontMatter.title}
-      </Heading>
+      <Box as='main' id='main' mx='auto' maxW='800px' w='100%'>
+        <Image
+          className='cover-image'
+          src={frontMatter.image}
+          alt='cover'
+          height={420}
+          width={1000}
+          blurDataURL={frontMatter.imageBlur}
+          placeholder='blur'
+          priority
+        />
 
-      <Information
-        publishedAt={frontMatter.publishedAt}
-        readingTime={frontMatter.readingTime}
-      />
+        <Heading
+          as='h1'
+          size='2xl'
+          mt={12}
+          mb={20}
+          mx='auto'
+          maxW='container.sm'
+        >
+          {frontMatter.title}
+        </Heading>
 
-      <Box as='section'>
-        <MDXRemote {...mdxSource} components={MDXComponents} />
+        <Information
+          publishedAt={frontMatter.publishedAt}
+          readingTime={frontMatter.readingTime}
+        />
+
+        <Box as='section'>
+          <MDXRemote {...mdxSource} components={MDXComponents} />
+        </Box>
       </Box>
     </BoxBox>
   );
