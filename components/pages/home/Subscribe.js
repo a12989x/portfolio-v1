@@ -85,7 +85,7 @@ const Subscribe = () => {
               borderRadius='sm'
               placeholder='jimmy@choo.com'
             />
-            <InputRightElement minW='8rem'>
+            <InputRightElement minW='8rem' zIndex={0}>
               <Button
                 w='100%'
                 variant='primary'
