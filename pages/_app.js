@@ -66,7 +66,7 @@ const MyApp = ({ Component, pageProps }) => {
         {
           id: 'blogAction',
           name: 'Blog',
-          shortcut: ['p'],
+          shortcut: ['b'],
           keywords: 'post articles',
           section: 'Navigation',
           perform: () => router.push('/blog'),
@@ -78,10 +78,7 @@ const MyApp = ({ Component, pageProps }) => {
           keywords: 'sourcecode',
           section: 'Socials',
           perform: () =>
-            window.open(
-              'https://github.com/codingcodax/portfolio-v1',
-              '_blank'
-            ),
+            window.open('https://github.com/codingcodax', '_blank'),
         },
         {
           id: 'linkedinAction',
@@ -108,7 +105,19 @@ const MyApp = ({ Component, pageProps }) => {
           keywords: 'videos',
           section: 'Socials',
           perform: () =>
-            window.open('https://twitter.com/codingcodax', '_blank'),
+            window.open(
+              'https://www.youtube.com/channel/UCMY0GhV1HuX4XdbgalC77VQ/videos',
+              '_blank'
+            ),
+        },
+        {
+          id: 'contactAction',
+          name: 'Contact',
+          shortcut: ['c'],
+          keywords: 'email hello',
+          section: '',
+          perform: () => window.open('mailto:codaxtech@gmail.com', '_blank'),
+          parent: 'aboutAction',
         },
       ]}
     >
