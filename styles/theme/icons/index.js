@@ -20,6 +20,7 @@ import NewspaperIcon from './newspaper';
 import TypescriptIcon from './typescript';
 import LitreekIcon from './litreek';
 import MDXIcon from './mdx';
+import HomeIcon from './home';
 
 export {
   LogoIcon,
@@ -44,4 +45,5 @@ export {
   TypescriptIcon,
   LitreekIcon,
   MDXIcon,
+  HomeIcon,
 };
