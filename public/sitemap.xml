@@ -3,4 +3,32 @@
     <url>
         <loc>https://codaxx.ml</loc>
     </url>
+    <url>
+        <loc>https://codaxx.ml/about</loc>
+    </url>
+    <url>
+        <loc>https://codaxx.ml/projects</loc>
+    </url>
+    <url>
+        <loc>https://codaxx.ml/blog</loc>
+    </url>
+    <url>
+        <loc>https://codaxx.ml/snippets</loc>
+    </url>
+    <url>
+        <loc>https://codaxx.ml/community</loc>
+    </url>
+    <url>
+        <loc>https://codaxx.ml/uses</loc>
+    </url>
+    <!-- Posts -->
+    <url>
+        <loc>https://www.codingcodax.dev/blog/how-to-center-elements-with-css</loc>
+    </url>
+    <url>
+        <loc>https://www.codingcodax.dev/blog/how-to-uppercase-the-first-letter-of-a-string-in-JavaScript</loc>
+    </url>
+    <url>
+        <loc>https://www.codingcodax.dev/blog/build-react-and-next-applications-most-fast-and-efficiently</loc>
+    </url>
 </urlset>
