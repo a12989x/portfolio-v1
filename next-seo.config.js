@@ -14,7 +14,7 @@ const SEO = {
     description,
     images: [
       {
-        url: 'https://www.codingcodax.dev/og.png',
+        url: 'https://www.codingcodax.dev/og.jpg',
         alt: title,
         width: 1280,
         height: 720,
