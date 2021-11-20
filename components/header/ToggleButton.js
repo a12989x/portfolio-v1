@@ -1,7 +1,6 @@
 import { IconButton } from '@chakra-ui/button';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { AnimatePresence, motion } from 'framer-motion';
-
 import { useColorMode } from '@chakra-ui/color-mode';
 
 const MoonIconBox = motion(MoonIcon);
