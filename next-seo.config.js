@@ -5,16 +5,16 @@ const description =
 const SEO = {
   title,
   description,
-  canonical: 'https://codaxx.ml',
+  canonical: 'https://www.codingcodax.dev/',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://codaxx.ml',
+    url: 'https://www.codingcodax.dev/',
     title,
     description,
     images: [
       {
-        url: 'https://fastfeedback.io/og.png',
+        url: 'https://www.codingcodax.dev/og.png',
         alt: title,
         width: 1280,
         height: 720,
